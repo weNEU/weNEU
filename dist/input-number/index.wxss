@@ -1,0 +1,66 @@
+.wux-input-number {
+  position: relative;
+}
+.wux-input-number__input {
+  float: left;
+  width: 64rpx;
+  height: 40rpx;
+  font-size: 32rpx;
+  color: #666;
+  -webkit-appearance: none;
+          appearance: none;
+  border: 2rpx solid #ececec;
+  padding: 6rpx 0;
+  text-align: center;
+  border-radius: 2rpx;
+  min-height: inherit;
+}
+.wux-input-number__selector {
+  float: left;
+  height: 40rpx;
+  font-size: 50rpx;
+  line-height: 36rpx;
+  color: #33cd5f;
+  border: 2rpx solid #ececec;
+}
+.wux-input-number__selector--light {
+  color: #ddd;
+}
+.wux-input-number__selector--stable {
+  color: #b2b2b2;
+}
+.wux-input-number__selector--positive {
+  color: #387ef5;
+}
+.wux-input-number__selector--calm {
+  color: #11c1f3;
+}
+.wux-input-number__selector--assertive {
+  color: #ef473a;
+}
+.wux-input-number__selector--balanced {
+  color: #33cd5f;
+}
+.wux-input-number__selector--energized {
+  color: #ffc900;
+}
+.wux-input-number__selector--royal {
+  color: #886aea;
+}
+.wux-input-number__selector--dark {
+  color: #444;
+}
+.wux-input-number__selector--disabled {
+  color: #ccc;
+}
+.wux-input-number__selector--sub {
+  border-right: none;
+  padding: 6rpx 20rpx;
+  border-radius: 4rpx 0 0 4rpx;
+}
+.wux-input-number__selector--plus {
+  border-left: none;
+  margin-right: 10rpx;
+  padding: 6rpx 16rpx;
+  border-radius: 0 4rpx 4rpx 0;
+}

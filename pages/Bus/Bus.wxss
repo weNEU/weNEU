@@ -1,0 +1,19 @@
+/* pages/Bus/Bus.wxss */
+page{
+  background-color: #EDF8F7
+}
+.image_s{
+  width: 700rpx;
+  padding: 3.4% ;
+  height: 380rpx
+}
+.image_j{
+  width: 700rpx;
+  padding: 3.4% ;
+  height: 900rpx
+}
+.text{
+  font-size: 12pt;
+    padding: 4% ;
+  color: #111
+}

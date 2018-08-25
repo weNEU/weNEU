@@ -1,0 +1,22 @@
+ <template name="t1">  
+ 
+ <view class="content">
+                                    <view class="loader">
+                                      <image src="/images/news/loading.gif" wx-if="{{loading}}"></image>
+                                    </view>
+                                    <block wx:for="{{active.data}}" wx:key="item.href">
+                                      <navigator url="/pages/news/detail/detail?type={{item.type}}&id={{item.href}}&title={{item.name}}&date={{item.time}}">
+                                        <view class="list-item {{item.type}}">
+                                          <view class="list-item-left">
+                                            <text class="list-item-title">{{item.name}}</text>
+                                            <text class="list-item-time">{{item.time}}</text>
+                                          </view>
+                                          <image class="list-item-icon" src="/images/news/{{item.type}}.png"></image>
+                                        </view>
+                                      </navigator>
+                                    </block>
+                                  </view>
+                                  <!--提醒消息-->
+                                  <text class="content-ending">{{active.remind}}</text>
+
+</template>

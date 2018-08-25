@@ -1,0 +1,21 @@
+<!--pages/grade/grade.wxml-->
+        <view class="cj-header">
+            <view class="cj-text">
+                <text class="cj-header-title">2017-2018学年第二学期</text>
+                <text class="cj-header-gpa">当前绩点：{{GPA}}</text>
+            </view>
+        </view>
+        <view class="cj-info-ctn">
+            <view class="cj-info-box" >
+                
+                <view class="cj-info" wx:for="{{cjInfo}}" wx:for-item="item" bindtap='show'data-common='{{item.common}}'data-medium='{{item.medium}}'data-final='{{item.final}}'data-name='{{item.name}}'>
+                <view class='cj-info-left'>
+                    <text class="cj-info-wh">{{item.name}}</text>
+                    <text class="cj-info-what">学分：{{item.credit}}</text>
+                </view>
+                    <text class="cj-info-socre">{{item.total}}</text>
+                </view>
+            </view>
+        </view>
+
+

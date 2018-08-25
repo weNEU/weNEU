@@ -1,0 +1,19 @@
+<!--pages/zx/zx.wxml-->
+<picker mode="multiSelector" bindchange="changeBuilding" bindcolumnchange="columnchange" value="{{index}}"range-key="name" range="{{buildings}}">
+      <view class="picker">
+        <view>当前选择：{{building.addr}}-{{building.name}}</view>
+        <view>
+          点击切换
+        </view>
+      </view>
+</picker>
+<view class="box" wx:for="{{Rlist}}" wx:for-index="index">
+  <view class="jie">
+  {{(index+1)*2-1}}-{{(index+1)*2}}节
+  </view>
+  <view class="weui-grids" >
+    <view class="weui-grid" wx:for="{{Rlist[index]}}">
+    {{item.name}}
+   </view>
+  </view>
+</view>

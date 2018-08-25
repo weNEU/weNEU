@@ -1,0 +1,4 @@
+<!--pages/IP/detail/detail.wxml-->
+<view class="section tc">
+  <video class='video'src="{{address}}" controls autoplay="true"></video>
+</view>

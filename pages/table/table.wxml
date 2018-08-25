@@ -1,0 +1,33 @@
+<!--pages/set.wxml-->
+<picker class="button-sp-area" mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+<view class="th-shadow">当前周：{{week}}</view>
+</picker>
+<view class="table">
+  <view class="tr">
+    <view class="th idx"></view>
+    <view class="th">周一</view>
+    <view class="th">周二</view>
+    <view class="th">周三</view>
+    <view class="th">周四</view>
+    <view class="th">周五</view>
+    <view class="th">周六</view>
+    <view class="th">周日</view>
+  </view>
+  </view>
+ <block wx:for="{{[1,2,3,4,5,6]}}" wx:for-item="i"wx:key="td_key" >
+    <view class="tr">
+      <view class="td idx">{{index+1}}</view>
+      <block  wx:for="{{listData[i-1]}}"wx:key="listData_key" >
+      <view wx:if= "{{item.coursename==' '}}">
+           <view class="td">{{item.coursename}}{{item.classroom}}</view>
+       </view>
+      <view wx:else>
+           <view class="td-shadow">{{item.coursename}}{{item.classroom}}</view>
+      </view>      
+      </block>
+    </view>
+ </block>
+
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
+</view>

@@ -1,0 +1,17 @@
+<view class = "container">
+  <view class = "placename">{{placename}}</view>
+  <view class = "whole">
+      <view wx:for="{{data}}" class = "item-box">
+         <view class = "item-left">
+             <view >单位：</view>
+             <view >姓名：</view>
+             <view>联系方式：</view>
+         </view>
+         <view class = "item-right">
+             <view>{{item.department}}</view>
+             <view>{{item.name}}</view>
+             <view>{{item.tele}}</view>
+         </view>
+      </view>
+  </view>
+</view>

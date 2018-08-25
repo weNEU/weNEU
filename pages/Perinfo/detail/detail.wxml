@@ -1,0 +1,87 @@
+
+<!--detail.wxml (common)-->
+<view class="container">
+ 
+  <block >
+    <view class="title">
+      <text>{{data[id].title}}</text>
+    </view>
+    <view class="info">
+      <text wx:if="{{date}}">发布时间：{{data[id].date}}</text>
+    </view>
+    <text class="detail" wx:if="{{id==1}}">
+    很荣幸地告诉你，weNEU开始内测啦！
+    您当前使用的版本是weNEU上线的第一个版本(v0.1内测版)
+    此版本是weNEU的基础版本，我们目前实现了以下功能
+
+
+1.查课表（本周课表）
+2.查成绩（本学期成绩）
+3.查考表
+4.查校车
+5.查校历
+6.浏览校内新闻（已支持东北大学新闻网，教务处，软件学院）
+7.登录（具有验证功能）
+
+目前我们正在全力开发新的版本
+下一个版本预计您将体验到:
+
+1.查课表（本日课表、学期课表）
+2.查成绩（历史成绩、绩点展示）
+3.图书馆检索
+4.更多网站的新闻资讯
+5.One More Thing!
+
+您在内测版本中遇到的任何问题可以在QQ群721423324中告诉我们！
+也欢迎有能力有想法的同学加入我们，请致信xrwgood@qq.com</text>
+ <text class="detail" wx:if="{{id==2}}">1.weNEU是什么？
+ 
+weNEU是学习生活的助手
+weNEU是校园信息聚合平台
+weNEU是对东北大学移动端校园市场的探索
+weNEU是一个开放的不断开发新功能的小程序
+weNEU是你和我
+
+2.weNEU有哪些功能？
+
+weNEU当前阶段集中于将学校的传统PC端网站移植到移动端
+通过微信小程序实现教务处的各种功能、浏览学校各个网站的新闻通知
+还有很多功能已经在我们的开发计划里，我们热衷于不断探索移动校园的潜力
+
+3.我的信息安全吗？
+
+您的学号、密码都是保存在本地的，weNEU不收集您的任何信息。
+
+4.weNEU运营机制。
+
+weNEU是非营利性软件。
+在适当的时候我们会考虑广告位招租。
+广告收入将用来支付weNEU的运营费用。
+如果结余很多的话我们还会通过某些活动给大家送礼物哦！
+
+5.如何加入我们？
+
+提交界面设计(在此pull)-->https://github.com/weNEU/weNEU
+开发新功能、加入运营团队-->xrwgood@qq.com
+
+【欢迎加入weNEU用户交流群】721423324
+如果你觉得weNEU还不错的话，欢迎分享它给你的同学们。
+weNEU是一个开源项目，在github上搜索weNEU就能看到我们啦！
+欢迎大家关注我们的项目进度，也欢迎共同开发。顺手给个star也是不错的！</text>
+    <swiper class="files_list" wx:if="{{files_len}}" indicator-dots="{{files_len !== 1}}" autoplay="{{!file_loading}}">
+      <swiper-item wx:for="{{files_list}}" wx:key="fjid">
+        <view class="file">
+            <image src="/images/news/file.png" class="file-img"></image>
+            <view class="fileNameSource">
+              <text class="file-name">{{item.fjtitle}}</text>
+              <text class="file-source">{{source}}</text>
+            </view>
+            <view class="file-remind">
+              <image wx:if="{{file_loading}}" src="/images/index/loading.gif"></image>
+              <text wx:else data-preview="{{item.preview}}" data-url="{{item.flink}}" bindtap="getFj">{{item.preview ? '点击预览' : '无法预览'}}</text>
+            </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </block>
+</view>

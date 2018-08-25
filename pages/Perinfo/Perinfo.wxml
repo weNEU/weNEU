@@ -1,0 +1,229 @@
+<!--pages/Perinfo/Perinfo.wxml-->
+<view class="weui-panel border-shadow">
+  <view class="swiper-container">
+    <swiper class="swiper_box" autoplay="{{true}}" interval="3000" duration="1500">
+      <block wx:for="{{banners}}">
+        <swiper-item item-id="{{item.businessId}}">
+          <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picture}}" class="slide-image" width="750rpx" height="400rpx" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{banners}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="weui-grids" wx:if="{{iflogin==1}}">
+    <navigator url="../table/table" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/schedule.svg" />
+      <view class="weui-grid__label">课表</view>
+    </navigator>
+    <navigator url="../grade/grade" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/grade.svg" />
+      <view class="weui-grid__label">成绩</view>
+    </navigator>
+    <navigator url="../Test/Test" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/exam.svg" />
+      <view class="weui-grid__label">考表</view>
+    </navigator>
+
+    <navigator url="../zx/zx" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/zx.png" />
+      <view class="weui-grid__label">自习</view>
+    </navigator>
+    <navigator url="../IP/ip" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/TV.png" />
+      <view class="weui-grid__label">电视墙</view>
+    </navigator>
+    <navigator url="../Library/Library" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/loan.svg" />
+      <view class="weui-grid__label">图书馆</view>
+    </navigator>
+    <navigator url="../jy/jy" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/loan_all.svg" />
+      <view class="weui-grid__label">借阅</view>
+    </navigator>
+    <navigator url="../Bus/Bus" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/bus.svg" />
+      <view class="weui-grid__label">校车</view>
+    </navigator>
+    <navigator url="../Cal/Cal" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/cal.svg" />
+      <view class="weui-grid__label">校历</view>
+    </navigator>
+    <navigator url="../Contacts/Contacts" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="/images/icon/index/Unknown.svg" />
+      <view class="weui-grid__label">通讯录</view>
+    </navigator>
+
+  </view>
+  <view wx:else>
+    <view class="weui-grids">
+      <navigator url="../login/login" open-type="redirect" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/schedule.svg" />
+        <view class="weui-grid__label">课表</view>
+      </navigator>
+      <navigator url="../login/login" open-type="redirect" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/grade.svg" />
+        <view class="weui-grid__label">成绩</view>
+      </navigator>
+      <navigator url="../login/login" open-type="redirect" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/exam.svg" />
+        <view class="weui-grid__label">考表</view>
+      </navigator>
+
+      <navigator url="../login/login" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" open-type="redirect" src="/images/icon/index/zx.png" />
+        <view class="weui-grid__label">自习</view>
+      </navigator>
+      <navigator url="../IP/ip" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/TV.png" />
+        <view class="weui-grid__label">电视墙</view>
+      </navigator>
+      <navigator url="../Library/Library" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/loan.svg" />
+        <view class="weui-grid__label">图书馆</view>
+      </navigator>
+      <navigator url="../login/login" open-type="redirect" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/loan_all.svg" />
+        <view class="weui-grid__label">借阅</view>
+      </navigator>
+      <navigator url="../Bus/Bus" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/bus.svg" />
+        <view class="weui-grid__label">校车</view>
+      </navigator>
+      <navigator url="../Cal/Cal" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/icon/index/cal.svg" />
+        <view class="weui-grid__label">校历</view>
+      </navigator>
+      <navigator url="../Contacts/Contacts" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" open-type="redirect" src="/images/icon/index/Unknown.svg" />
+        <view class="weui-grid__label">通讯录</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="weui-panel border-shadow">
+  <view class="main-card-item" id="kb">
+    <view class="card-item-hd">
+      <image class="card-item-icon" src="/images/core/kb.png"></image>
+      <text class="card-item-name">今日课表</text>
+    </view>
+    <view wx:if="{{iflogin==1}}">
+      <view wx:if="{{index==0}}">
+        <navigator url="/pages/zx/zx">
+          <view class="kb-item">
+            <view class="kb-item-left">
+              <text class="kb-item-when">今日无课，找个地方自习吧</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view wx:else>
+        <view class="card-item-bd" wx:for="{{Clist}}" wx:for-index="index">
+          <view class="kb-item" wx:if="{{item.coursename!=' '}}">
+            <view class="kb-item-left">
+              <text class="kb-item-what">{{item.coursename}}</text>
+              <text class="kb-item-when">{{(index+1)*2-1}}-{{(index+1)*2}}节</text>
+            </view>
+            <text class="kb-item-where">{{item.classroom}}</text>
+          </view>
+        </view>
+      </view>
+      <navigator url="/pages/table/table">
+        <view class="kb-open">
+          <text>查看本周完整课表</text>
+        </view>
+      </navigator>
+    </view>
+    <view wx:else>
+      <navigator url="/pages/login/login" open-type="redirect">
+        <view class="kb-open">
+          <text>请绑定学号</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="weui-panel border-shadow">
+  <view class="main-card-item" id="kb">
+    <view class="card-item-hd">
+      <image class="card-item-icon" src="/images/core/kjs.png"></image>
+      <text class="card-item-name">借阅信息</text>
+    </view>
+    <view wx:if="{{iflogin==1}}">
+      <view wx:if="{{loan.length!=0}}">
+        <view class="card-item-bd" wx:for="{{loan}}" wx:for-index="index">
+          <view class="kb-item">
+            <view class="kb-item-left">
+              <text class="kb-item-what">{{item.name}}</text>
+              <text class="kb-item-when">{{item.author}}</text>
+            </view>
+            <text class="kb-item-where">{{item.date}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="kb-item">
+
+          <view class="kb-item-left">
+            <text class="kb-item-when">暂无借阅</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <view wx:else>
+      <navigator url="/pages/login/login" open-type="redirect">
+        <view class="kb-open">
+          <text>请绑定学号</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<!--一卡通-->
+<view class="weui-panel border-shadow">
+
+<view class="main-card-item" id="ykt">
+  <navigator url="/pages/ykt/ykt">
+    <view class="card-item-hd">
+      <image class="card-item-icon" src="/images/core/ykt.png"></image>
+      <text class="card-item-name">一卡通</text>
+    </view>
+    <view wx:if="{{iflogin==1}}">
+    <view class="card-item-bd">
+      <view class="card-info-hd">
+        <view class="card-info-left">
+          <text class="ykt-title">余额：</text>
+        </view>
+        <view class="card-info-right">
+          <view>截至时间：2018-7-17 12:00</view>
+        </view>
+      </view>
+      <view class="ykt-balance">
+        <text class="ykt-balance-value">48.7</text>
+        <text class="ykt-balance-text">元</text>
+      </view>
+      <block wx:if="{{card.ykt.data.cost_status}}">
+        <text class="ykt-title">今日消费：</text>
+        <view class="ykt-cost">
+          <block wx:for="{{card.ykt.data.today_cost.value}}" wx:key="*this">
+            <text class="ykt-cost-value">{{item}}</text>
+            <text class="ykt-cost-text" wx:if="{{ index != card.ykt.data.today_cost.value.length - 1}}">+</text>
+          </block>
+          <text class="ykt-cost-text">=</text>
+          <text class="ykt-cost-total">{{card.ykt.data.today_cost.total}}</text>
+          <text class="ykt-cost-text">元</text>
+        </view>
+      </block>
+    </view>
+        </view>
+
+  </navigator>
+</view>
+</view>

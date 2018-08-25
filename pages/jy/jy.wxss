@@ -1,0 +1,30 @@
+/* pages/jy/jy.wxss */
+page{
+    background: #f8f8f5 ;
+    width: 100%;
+    height: 100%;
+}
+  .book {
+    color: #333;
+    margin: 26rpx 26rpx 0 26rpx;
+    background: white;
+    border-radius: 4rpx;
+    box-shadow: 4rpx 4rpx 20rpx #ddd;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    }
+    .info {
+      margin-top: 10rpx;
+      justify-content: space-between;
+      display: flex;
+      color: #666;
+      font-size: 0.8rem;
+      flex-direction: column;
+
+    }
+    .warn {
+      color:#f06292;
+    }

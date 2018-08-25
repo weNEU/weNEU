@@ -1,0 +1,13 @@
+<!--pages/Test/Test.wxml-->
+<view class="container">
+        <view class="ks-header">
+            <view class="ks-text">
+                <text class="ks-header-title">2017-2018学年第二学期</text>
+            </view>
+        </view>
+        <wux-cell-group>
+          <view wx:for="{{ksInfo}}"wx:if="{{item[1]!=null}}" wx:if="{{item[1]!=null}}">  
+            <wux-cell title="{{item[1]}}"  label="{{item[3]}}" extra="{{item[5]}}"></wux-cell>
+          </view>
+        </wux-cell-group>
+</view>

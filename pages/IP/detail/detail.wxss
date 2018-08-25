@@ -1,0 +1,5 @@
+/* pages/IP/detail/detail.wxss */
+.video{
+  width: 750rpx;
+  
+}

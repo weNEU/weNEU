@@ -1,0 +1,5 @@
+<!--pages/Bus/Bus.wxml-->
+<text class='text'>学生班车时刻</text>
+<image class="image_s" src="/images/index/Bus.jpg" />
+<text class='text'>教师班车时刻</text>
+<image class="image_j" src="/images/index/jBus.jpg" />

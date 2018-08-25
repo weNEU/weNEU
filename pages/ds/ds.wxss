@@ -1,0 +1,5 @@
+/* pages/ds/ds.wxss */
+image{
+  width: 750rpx;
+  height: 750rpx;
+}

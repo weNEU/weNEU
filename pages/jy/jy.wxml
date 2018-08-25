@@ -1,0 +1,19 @@
+<!--pages/jy/jy.wxml-->
+<view wx:if="{{loan.length!=0}}">
+    <block wx:for="{{loan}}" wx:key="{{index}}">
+      <view class="book">
+        <view class="title">{{item.name}}</view>
+        <view class="info">
+          <view>作者: {{item.author}}</view>
+          <view>外借情况: {{item.library}}</view>
+          <view>到期: {{item.date}}</view>
+          <view wx:if="{{item.arrearage>0}}" class="warn">欠费: {{item.fine}}</view>
+        </view>
+      </view>
+    </block>
+</view>
+<view wx:else>
+<view class="book">
+    <view class="title">暂无借阅信息</view>
+</view>
+</view>

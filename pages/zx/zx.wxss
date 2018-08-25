@@ -1,0 +1,33 @@
+/* pages/zx/zx.wxss */
+.picker {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #555;
+}
+.box{
+    padding: 0.5rem;
+    display: flex;
+      flex-direction: column;
+
+font-size: 0.8rem;
+  color: #555;
+
+}
+.jie{
+    width: 673rpx;
+    padding-left: 40rpx;
+    border-bottom: 4rpx solid #555;
+
+}
+.show{
+      display: flex;
+      flex-direction:row;
+}
+.weui-grid {
+  padding: 10px 10px;
+  color: #333;
+  width: 20%;
+  padding-bottom: 10rpx
+}

@@ -1,0 +1,28 @@
+.container{
+  background-color: #F6f8f9
+}
+.placename{
+  background-color: white;
+  width:100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  height: 50rpx;
+}
+
+.item-box{
+  background-color: white;
+  width:750rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top:10px;
+}
+
+.item-left{
+ padding: 10px 30rpx 20rpx 40rpx;
+}
+.item-right{
+ padding: 10px 30rpx 20rpx 100rpx;
+}
+
