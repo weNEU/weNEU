@@ -8,7 +8,7 @@ weNEU由东北大学软件学院16级软英专业的几名同学共同开发，�
 - weNEU还在公测阶段，有一系列新的功能正在我们的开发计划中。“你想要的，都在这里！”
 
 ## 扫码体验
-![weNEU二维码](https://github.com/weNEU/weNEU/blob/master/weneuqr.jpg?raw=true)
+<img src="https://github.com/weNEU/weNEU/blob/master/weneuqr.jpg?raw=true" width="140">
 
 ## 联系我们
 >用户交流QQ群:721423324  
