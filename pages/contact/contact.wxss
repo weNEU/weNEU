@@ -1,0 +1,44 @@
+Page{
+  background-color:#F6f8f9;
+  
+}
+.container2{
+  padding-top: 30rpx;
+  padding-bottom: 0rpx;
+  padding-right:20rpx;
+}
+
+.container1{
+  height: 80rpx;
+  padding-top: 20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  padding-bottom: 0rpx;
+}
+
+.place{
+  background-color: white;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  width:710rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 4rpx 4rpx 10rpx #eee;
+}
+.item-text{
+  margin-left: 20rpx;
+  color: black;
+  font-size: 14px;
+  line-height:90rpx;
+  align-self: center;
+  
+}
+.image{
+  margin-right: 20rpx;
+  align-self: center;
+  height:50rpx;
+}
+

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "IP网关",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#FFD700",
+  "component": true,
+  "usingComponents": {
+    "van-field": "../../dist_vant/field/index",
+    "van-switch": "../../dist_vant/switch/index",
+    "van-button": "../../dist_vant/button/index"
+  }
+}

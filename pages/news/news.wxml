@@ -1,103 +1,102 @@
 <!--news.wxml-->
 <view class="container-self">
   <!--新闻分类-->
-  <view class= "filter">
-  <scroll-view  scroll-x="true">
-    <block wx:for="{{list}}" wx:key="id">
-      <image  class="filter-item" data-id="{{item.id}}" id="{{item.type}}" bindtap="changeFilter" src="/images/news/{{item.type}}@colour.png"></image>
-    </block>
+  <view class="filter">
+    <scroll-view scroll-x="true">
+      <block wx:for="{{list}}" wx:key="id">
+        <image class="filter-item" data-id="{{item.id}}" id="{{item.type}}" bindtap="changeFilter" src="/images/news/{{item.type}}@colour.png"></image>
+      </block>
     </scroll-view>
     <scroll-view class="swiper-tab" scroll-x="true">
-    <block wx:for="{{list[page].subType}}">
-      <view class="swiper-tab-list {{currentTab==index+1? 'on' : ''}}" data-current="{{index+1}}" bindtap="swichNav">{{item}}</view> 
-     </block>
+      <block wx:for="{{list[page].subType}}">
+        <view class="swiper-tab-list {{currentTab==index+1? 'on' : ''}}" data-current="{{index+1}}" bindtap="swichNav">{{item}}</view>
+      </block>
     </scroll-view>
   </view>
 
-<!-- <swiper-tap> -->
+  <!-- <swiper-tap> -->
 
-    
-    <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*138+300}}rpx ; 'bindchange='swiper_bindchange' wx:if="{{page==0}}">
-      <swiper-item class = "swiper-item" wx:for="{{list[page].subType}}">
-                                                    <!--新闻列表-->
-                                  <view class="content">
-                                    <view class="loader" wx-if="{{loading}}">
-                                      <image src="/images/news/loading.gif" ></image>
-                                    </view>
-                                    <block wx:for="{{active.data}}" wx:key="item.href">
-                                      <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href}}&title={{item.name}}&date={{item.time}}">
-                                        <view class="list-item.{{item.type}}">
-                                          <view class="list-item-left">
-                                            <text class="list-item-title">{{item.name}}</text>
-                                            <text class="list-item-time">{{item.time}}</text>
-                                          </view>
-                                          <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
-                                        </view>
-                                      </navigator>
-                                    </block>
-                                  </view>
-                                  <!--提醒消息-->
-                                  <view class="content-ending">
-                                  <text >{{active.remind}}</text>
-                                  </view>
-      </swiper-item>
 
-     
-    </swiper>
-     <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*126+300}}rpx ; 'bindchange='swiper_bindchange' wx:if="{{page==1}}">
-      <swiper-item class = "swiper-item" wx:for="{{list[page].subType}}">
-                                                    <!--新闻列表-->
-                                  <view class="content">
-                                    <view class="loader" wx-if="{{loading}}">
-                                      <image src="/images/news/loading.gif" ></image>
-                                    </view>
-                                    <block wx:for="{{active.data}}" wx:key="item.href">
-                                      <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href_real}}&title={{item.name}}&date={{item.time}}">
-                                        <view class="list-item.{{item.type}}">
-                                          <view class="list-item-left">
-                                            <text class="list-item-title">{{item.name}}</text>
-                                            <text class="list-item-time">{{item.time}}</text>
-                                          </view>
-                                          <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
-                                        </view>
-                                      </navigator>
-                                    </block>
-                                  </view>
-                                  <!--提醒消息-->
-                                  <view class="content-ending">
-                                  <text >{{active.remind}}</text>
-                                  </view>
-      </swiper-item>
+  <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*138+300}}rpx ; ' bindchange='swiper_bindchange' wx:if="{{page==0}}">
+    <swiper-item class="swiper-item" wx:for="{{list[page].subType}}">
+      <!--新闻列表-->
+      <view class="content">
+        <view class="loader" wx-if="{{loading}}">
+          <image src="/images/news/loading.gif"></image>
+        </view>
+        <block wx:for="{{active.data}}" wx:key="item.href">
+          <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href}}&title={{item.name}}&date={{item.time}}">
+            <view class="list-item.{{item.type}}">
+              <view class="list-item-left">
+                <text class="list-item-title">{{item.name}}</text>
+                <text class="list-item-time">{{item.time}}</text>
+              </view>
+              <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <!--提醒消息-->
+      <view class="content-ending">
+        <text>{{active.remind}}</text>
+      </view>
+    </swiper-item>
 
-     
-    </swiper>
 
-      <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*126+300}}rpx ; 'bindchange='swiper_bindchange' wx:if="{{page==2}}">
-      <swiper-item class = "swiper-item" wx:for="{{list[page].subType}}">
-                                                    <!--新闻列表-->
-                                  <view class="content">
-                                    <view class="loader" wx-if="{{loading}}">
-                                      <image src="/images/news/loading.gif" ></image>
-                                    </view>
-                                    <block wx:for="{{active.data}}" wx:key="item.href">
-                                      <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href}}&title={{item.name}}&date={{item.time}}">
-                                        <view class="list-item.{{item.type}}">
-                                          <view class="list-item-left">
-                                            <text class="list-item-title">{{item.name}}</text>
-                                            <text class="list-item-time">{{item.time}}</text>
-                                          </view>
-                                          <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
-                                        </view>
-                                      </navigator>
-                                    </block>
-                                  </view>
-                                  <!--提醒消息-->
-                                  <view class="content-ending">
-                                  <text >{{active.remind}}</text>
-                                  </view>
-      </swiper-item>
+  </swiper>
+  <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*126+300}}rpx ; ' bindchange='swiper_bindchange' wx:if="{{page==1}}">
+    <swiper-item class="swiper-item" wx:for="{{list[page].subType}}">
+      <!--新闻列表-->
+      <view class="content">
+        <view class="loader" wx-if="{{loading}}">
+          <image src="/images/news/loading.gif"></image>
+        </view>
+        <block wx:for="{{active.data}}" wx:key="item.href">
+          <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href_real}}&title={{item.name}}&date={{item.time}}">
+            <view class="list-item.{{item.type}}">
+              <view class="list-item-left">
+                <text class="list-item-title">{{item.name}}</text>
+                <text class="list-item-time">{{item.time}}</text>
+              </view>
+              <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <!--提醒消息-->
+      <view class="content-ending">
+        <text>{{active.remind}}</text>
+      </view>
+    </swiper-item>
 
-     
-    </swiper>
+
+  </swiper>
+
+  <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*126+300}}rpx ; ' bindchange='swiper_bindchange' wx:if="{{page==2}}">
+    <swiper-item class="swiper-item" wx:for="{{list[page].subType}}">
+      <!--新闻列表-->
+      <view class="content">
+        <view class="loader" wx-if="{{loading}}">
+          <image src="/images/news/loading.gif"></image>
+        </view>
+        <block wx:for="{{active.data}}" wx:key="item.href">
+          <navigator url="/pages/news/detail/detail?type={{active.type}}&id={{item.href}}&title={{item.name}}&date={{item.time}}">
+            <view class="list-item.{{item.type}}">
+              <view class="list-item-left">
+                <text class="list-item-title">{{item.name}}</text>
+                <text class="list-item-time">{{item.time}}</text>
+              </view>
+              <image class="list-item-icon" src="/images/news/{{list[page].type}}.png"></image>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <!--提醒消息-->
+      <view class="content-ending">
+        <text>{{active.remind}}</text>
+      </view>
+    </swiper-item>
+
+
+  </swiper>
 </view>
- 

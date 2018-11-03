@@ -1,0 +1,11 @@
+<view class="container2">
+  <view class=" container1" wx:for="{{place}}">
+    <navigator url='./detail/detail?place={{item}}' hover-class='none'>
+      <view class='place'>
+        <view class="item-text">
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

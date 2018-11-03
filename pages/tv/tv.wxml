@@ -1,0 +1,11 @@
+<!--pages/IP/ip.wxml-->
+<van-notify id="custom-selector" />
+<van-button type="primary">按钮</van-button>
+ <block   wx:for="{{TVlist}}" wx:key="index">
+    <view  class='con' data-id='{{item.addr}}' >
+        <navigator class='Video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img'src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+    </view>
+  </block>

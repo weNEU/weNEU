@@ -1,4 +1,7 @@
 {
-    "navigationBarTitleText": "课表查询",
-    "navigationBarBackgroundColor": "#8ec5fc"
+    "navigationBarTitleText": "教务-课表查询",
+    "navigationBarTextStyle": "#8ec5fc",
+    "navigationBarBackgroundColor": "#8ec5fc",
+      "enablePullDownRefresh": true
+      
 }

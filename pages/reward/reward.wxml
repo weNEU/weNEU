@@ -1,0 +1,5 @@
+<!--pages/ds/ds.wxml-->
+
+<view wx:for="{{imgalist}}"wx:for-item="image"class="previewimg">  
+        <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" class='img'></image>  
+      </view>  

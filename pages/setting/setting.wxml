@@ -1,0 +1,10 @@
+<wux-dialog id="wux-dialog" />
+<wux-dialog id="wux-dialog--alert" />
+
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+       <wux-button block type="balanced" bind:click="confirm1">重置图书馆账号 </wux-button>
+       <wux-button block type="balanced" bind:click="confirm2">重置一卡通账号</wux-button>
+       <wux-button block type="assertive" bind:click="confirm">重置学号</wux-button>
+    </view>
+</view>

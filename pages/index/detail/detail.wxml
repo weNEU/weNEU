@@ -1,0 +1,17 @@
+<!--detail.wxml (common)-->
+<view class="container">
+
+  <block>
+    <!-- <view class="title">
+            <text>{{data[id].title}}</text>
+        </view> -->
+    <!-- <view class="info">
+            <text wx:if="{{date}}">发布时间：{{data[id].date}}</text>
+        </view> -->
+    <view wx:if="{{id==1}}">
+      <image src="/images/swipper/zhuli-detail.jpg" mode="widthFix" class="img-full"></image>
+
+      <view bindtap='copyText' data-text="1413212069" class="copy-content">『点我复制助力计划报名联系QQ』</view>
+    </view>
+  </block>
+</view>

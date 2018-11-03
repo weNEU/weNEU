@@ -1,6 +1,16 @@
 {
-  "navigationBarBackgroundColor": "#e78ab0",
-  "navigationBarTitleText": "成绩查询",
-  "backgroundColor": "#e78ab0",
-  "enablePullDownRefresh": true
+  "navigationBarBackgroundColor": "#8ec5fc",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "教务-成绩查询",
+  "backgroundColor": "#8ec5fc",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-badge": "../../dist/badge/index",
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-select": "../../dist/select/index",
+    "wux-dialog": "../../dist/dialog/index"
+  }
 }

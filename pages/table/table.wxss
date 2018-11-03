@@ -9,7 +9,14 @@
   justify-content: space-between;
   
 }
-
+.weui__icon{width:28px;height:28px}
+.middle{
+  padding-left: 38.8%;
+  padding-right: 38.8%;
+}
+.l{
+   white-space:pre-line;
+}
 .th {
   font-size: 30rpx;
   color: #43b0d1;
@@ -49,7 +56,6 @@
 
 }
 .lable.td {
-  
   border: 1px #dee1e8 solid;
   border-radius: 15rpx;
   box-shadow: 0 10rpx 35rpx #dee1e8;
@@ -99,4 +105,16 @@ button[type="default"][plain] {
   color: #fff;
   border-color: #fbc2eb;
   opacity: 0.6;
+}
+.ggrid{
+  display: -webkit-box;
+ word-break: break-all;
+ text-overflow: ellipsis;
+ overflow: hidden;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:2;
+}
+.ggrid_location{
+font-size: 20rpx;
+color: gray
 }

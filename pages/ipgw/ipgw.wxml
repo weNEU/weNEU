@@ -1,0 +1,65 @@
+<!--pages/ipgw/ipgw.wxml-->
+<view class="container">
+
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    icon="question"
+    placeholder="{{ipID}}"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+<van-switch checked="{{ checked }}" bind:change="onChange" />
+<van-button type="primary" plain bindtap="loginIn">登录</van-button>
+<van-button type="danger" plain bindtap="loginOut">断开</van-button>
+
+<van-cell-group>
+  <van-field
+    left-icon="contact"
+    value="{{ use }}"
+    label="已用流量"
+    placeholder=""
+    disabled
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    left-icon="contact"
+    value="{{ time }}"
+    label="已用时长"
+    placeholder=""
+    disabled
+    border="{{ false }}"
+  />
+
+    <van-field
+    left-icon="contact"
+    value="{{ money }}"
+    label="账户余额"
+    placeholder=""
+    disabled
+    border="{{ false }}"
+  />
+
+    <van-field
+    left-icon="contact"
+    value="{{ ip }}"
+    label="IP地址"
+    placeholder=""
+    disabled
+    border="{{ false }}"
+  />
+</van-cell-group>
+</view>

@@ -9,6 +9,9 @@ page {
   height: 100%;
   overflow: hidden;
 }
+.switch{
+  padding-left: 30rpx
+}
 .content{
   flex: 1;
   display: flex;
@@ -223,11 +226,8 @@ form {
   padding: 15rpx;
 }
 .box-close-1 {
-  position: absolute;
-  right: 20rpx;
   width: 35rpx;
   height: 35rpx;
-  padding-right: 65rpx;
 }
 .box-bd {
   flex: 1;
@@ -249,6 +249,13 @@ form {
 }
 .help-a text{
   word-break: break-all;
+}
+.title_text{
+  font-size:60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray
 }
 /**登录动画**/
 .login_video{

@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "教务-考试日程查询",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#8ec5fc",
+  "backgroundColor": "#8ec5fc",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-badge": "../../dist/badge/index",
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index"
+  }
+}

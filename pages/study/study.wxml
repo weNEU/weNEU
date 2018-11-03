@@ -1,0 +1,114 @@
+<!--pages/zx/zx.wxml-->
+<picker mode="multiSelector" bindchange="changeBuilding" bindcolumnchange="columnchange" value="{{index}}"range-key="name" range="{{buildings}}">
+      <view class="picker">
+        <view wx:if="{{Rlist !=''}}">
+          <view>当前选择：{{building.addr}}-{{building.name}}{{building.part}}</view>
+        </view>
+        <view wx:else>
+         <view>请选择校区-教学楼</view>
+        </view>
+        <view>
+          点击切换
+        </view>
+      </view>
+</picker>
+<view class="table">
+  <view class='row'>
+    <view class='weui-grid text'>教室</view>
+    <view class='weui-grid text'>1 / 2</view>
+    <view class='weui-grid text'>3 / 4</view>
+    <view class='weui-grid text'>5 / 6</view>
+    <view class='weui-grid text'>7 / 8</view>
+    <view class='weui-grid text'>9 /10</view>
+    <view class='weui-grid text'>11/12</view>
+  </view>
+  <view wx:for="{{Rlist}}">
+  <view class='row' bindtap='detail' data-no='{{item}}'>
+     <view class='weui-grid' >{{item.roomName}}</view>
+     <view class='weui-grid' >
+      <view class="item">
+       <view wx:if="{{item.first==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+     <view class='weui-grid'>
+      <view class="item">
+       <view wx:if="{{item.second==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+     <view class='weui-grid'>
+      <view class="item">
+       <view wx:if="{{item.third==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+     <view class='weui-grid'>
+      <view class="item">
+       <view wx:if="{{item.forth==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+     <view class='weui-grid'>
+      <view class="item">
+       <view wx:if="{{item.fifth==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+     <view class='weui-grid'>
+      <view class="item">
+       <view wx:if="{{item.sixth==1}}">
+          <view class='not-use'>
+            空
+           </view>
+       </view>
+       <view wx:else>
+         <view class='use'>
+            占
+           </view>
+       </view>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

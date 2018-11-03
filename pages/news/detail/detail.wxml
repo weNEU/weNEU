@@ -15,14 +15,14 @@
       <text wx:if="{{date}}">发布时间：{{date}}</text>
       <text wx:if="{{author}}">作者：{{author}}</text>
     </view>
-    <image class='image-info' src='{{img}}' wx:if="{{img}}"></image>
+    <image class='image-info' src="{{imgs}}" wx:if="{{imgs}}"></image>
     <text class="detail">{{content}}</text>
     <swiper class="files_list" wx:if="{{files_len}}" indicator-dots="{{files_len !== 1}}" autoplay="{{!file_loading}}">
-      <swiper-item wx:for="{{files_list}}" wx:key="fjid">
+      <swiper-item wx:for="{{files_list}}" wx:key="id">
         <view class="file">
             <image src="/images/news/file.png" class="file-img"></image>
             <view class="fileNameSource">
-              <text class="file-name">{{item.fjtitle}}</text>
+              <text class="file-name">{{item.title}}</text>
               <text class="file-source">{{source}}</text>
             </view>
             <view class="file-remind">

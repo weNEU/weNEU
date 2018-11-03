@@ -1,33 +1,43 @@
 <!--pages/set.wxml-->
-<picker class="button-sp-area" mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
-<view class="th-shadow">当前周：{{week}}</view>
+<picker class="button-sp-area" mode="selector" range="{{array1}}" value="{{index}}" bindchange="listenerPickerSelected">
+<view class="th-shadow">选择周：{{week}}</view>
 </picker>
+<icon ></icon>
 <view class="table">
   <view class="tr">
     <view class="th idx"></view>
+    <view class="th">周日</view>
     <view class="th">周一</view>
     <view class="th">周二</view>
     <view class="th">周三</view>
     <view class="th">周四</view>
     <view class="th">周五</view>
     <view class="th">周六</view>
-    <view class="th">周日</view>
   </view>
   </view>
  <block wx:for="{{[1,2,3,4,5,6]}}" wx:for-item="i"wx:key="td_key" >
     <view class="tr">
-      <view class="td idx">{{index+1}}</view>
-      <block  wx:for="{{listData[i-1]}}"wx:key="listData_key" >
-      <view wx:if= "{{item.coursename==' '}}">
-           <view class="td">{{item.coursename}}{{item.classroom}}</view>
+      <view class="td idx">{{array[i-1]}}</view>
+      
+      <block  wx:for="{{[6,0,1,2,3,4,5]}}" wx:for-item="n" wx:key="listData_key" >
+      <view wx:if= "{{listData[n][i-1][0]==null}}">
+           <view class="td"></view>
        </view>
       <view wx:else>
-           <view class="td-shadow">{{item.coursename}}{{item.classroom}}</view>
+           <view class="td-shadow">
+           <text class="ggrid">{{listData[n][i-1][0]}}</text>
+           <text class="ggrid_location">{{listData[n][i-1][2]}}</text>
+           </view>
       </view>      
       </block>
     </view>
  </block>
-
-<view class="button-sp-area">
-  <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
-</view>
+ <view>
+    <image class="weui__icon" src="/images/icon/left.svg" bindtap='last'>
+        </image>
+    <image class="weui__icon middle" src="/images/icon/refresh.svg" >
+        </image>
+    <image class="weui__icon" src="/images/icon/right.svg"bindtap='next'>
+        </image>
+    <text class="weui-grid__label ">下拉重新导入学期课表</text>
+  </view>

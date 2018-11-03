@@ -1,0 +1,30 @@
+<!--issues.wxml-->
+<view class="container">
+  <block>
+    <text class="issues-label">新建反馈</text>
+    <view class="issues-panel">
+      <view class="issues-input {{(showError&&!title)?'error':''}}">
+        <input placeholder="请输入反馈标题" bindinput="listenerTitle" />
+      </view>
+      <textarea class="issues-textarea {{(showError&&!content)?'error':''}}" cursor-spacing="50" placeholder="请输入反馈内容" bindinput="listenerTextarea"></textarea>
+    </view>
+
+    <block wx:if="{{upload}}">
+      <text class="issues-label">选择图片（可选）</text>
+      <view class="issues-img-panel {{(showError&&uploading)?'error':''}}">
+        <view class="issues-photo-item" wx:if="{{uploading}}">
+          <image class="remind-img" src="/images/index/loading.gif"></image>
+        </view>
+        <view class="issues-photo-item add-photo" wx:else bindtap="choosePhoto"></view>
+        <view class="issues-photo-item" wx:for="{{imgs}}" wx:key="*this">
+          <image src="{{item}}?imageView2/2/w/250/interlace/1/q/88" mode="aspectFill" data-index="{{index}}" bindtap="previewPhoto"></image>
+        </view>
+      </view>
+    </block>
+
+    <text class="issues-remind">您的反馈将会自动发送到weNEU的官方邮箱weneu2018@163.com上，我们会将反馈结果发送到您的学生邮箱上。此外，您还可以加入weNEU用户交流QQ群721423324进行即时反馈。再次感谢您对weNEU的成长所做的贡献！</text>
+    <view class="submit-btn {{uploading?'disabled':''}}" bindtap="submit">
+      <text>暂不可用</text>
+    </view>
+  </block>
+</view>

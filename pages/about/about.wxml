@@ -10,55 +10,107 @@
       <view class="version-title">
         <text class="title-name">weNEU</text>
         <text class="version-text">{{version}}</text>
-        <text class="version-text">内测</text>
+        <text class="version-text">公测</text>
       </view>
       <view bindtap="toggleLog">
-        <text class="version-log-link update-log" wx:if="{{!showLog}}">更新日志</text> 
-        <text class="version-log-link" wx:else>简介</text> 
+        <text class="version-log-link update-log" wx:if="{{!showLog}}">更新日志</text>
+        <text class="version-log-link" wx:else>简介</text>
       </view>
     </view>
     <view class="describe" wx:if="{{!showLog}}">
-        <text class="desc-title">简介</text>
-        <view class="desc-list">
-          <text class="desc-list-item">官网：http://weneu.xyz</text>
-          <text class="desc-list-item">Github：https://github.com/weNEU</text>
-        </view>
-        <text class="desc-content">weNEU是一款微信小程序，它将帮助我们东北大学的学生更方便的查询教务、图书馆、一卡通等信息以及浏览校内新闻、讲座、社团活动通知，并提供其他如上自习，失物招领，圈子等更多新鲜功能。</text>
-        <text class="desc-content">weNEU由东北大学软件学院16级软英专业的几名同学共同开发，是一种全新的有别于传统公众号的连接用户与服务的方式，无需下载与安装即可在微信内被便捷地获取和传播，同时具有出色的使用体验。</text>
-        <text class="desc-content">我们的小程序创造性地提出了“校园信息聚合平台”这一全新概念。通过微信小程序这一完美的解决方式，我们将帮助我们传统的大学网络空间从PC网页端尽快过渡到移动端来。我们集中于将校园网络功能和咨询信息迁移到小程序平台上，我们也致力于为传统校园自媒体赋能，并借此开发其他创意功能。我们利用小程序重新定义大学校园网络生活！</text>
-        <text class="desc-content">weNEU是学习生活的助手</text>
-        <text class="desc-content">weNEU是校园信息聚合平台</text>
-        <text class="desc-content">weNEU是对移动端校园市场的探索</text>
-        <text class="desc-content">weNEU是传统校园网络移植到移动端的解决方案</text>
-        <text class="desc-content">weNEU是一个开放的不断开发新鲜功能的永远年轻的小程序</text>
-        <text class="desc-content">拥有weNEU，您再也不需要教务处网站。在这里，学期课表、本周课表、今日课表，学期成绩、历史成绩、绩点分析、考试日程一应俱全。</text>
-        <text class="desc-content">拥有weNEU，您再也不需要图书馆网站。在这里，快捷地搜索馆藏图书，获取馆藏信心，图书架位，告别传统查询方式。在这里，当前借阅，历史借阅，您再也不会错过任何信息。</text>
-        <text class="desc-content">拥有weNEU，您将便捷地了解校园的大事小情。在这里，我们聚合了东大新闻网、教务处、创新网、各学院官网等，小程序在手，校园大事小情我有。</text>
-        <text class="desc-content">weNEU还在内测阶段，有一系列新的功能正在我们的开发计划中。一起期待“美好的事情即将发生”！</text>
-        <view class="desc-list">
-          <text class="desc-list-item">用户交流QQ群：721423324</text>
-          <text class="desc-list-item">合作/广告/加入我们：QQ245791886</text>
-        </view>
+      <text class="desc-title">简介</text>
+      <view class="desc-list">
+        <text class="desc-list-item">官网：http://weneu.xyz</text>
+        <text class="desc-list-item">Github：https://github.com/weNEU</text>
+      </view>
+      <text class="desc-content">weNEU是一款微信小程序，它致力于帮助我们东北大学的学生更方便的查询教务、图书馆、一卡通等信息以及浏览校内新闻、社团、通知等资讯，并提供其他如电视墙，IP网关，失物招领等更多新鲜功能。</text>
+      <text class="desc-content">weNEU由东北大学软件学院16级软英专业的几名同学共同开发，我们的小程序创造性地提出了“校园信息聚合平台”这一全新概念。我们希望将学校繁琐冗杂的各个系统整合在一起，做一个简单快捷的应用，并且移动端友好，大部分操作我们完全不用打开电脑，通过微信小程序这样一个便捷的方式满足我们的需求。</text>
+      <text class="desc-content">weNEU是本科生/研究生全覆盖的生活学习的助手</text>
+      <text class="desc-content">weNEU是传统校园网络移植到移动端的解决方案</text>
+      <text class="desc-content">weNEU是一个开放的不断开发新鲜功能的永远年轻的小程序</text>
+      <text class="desc-content">拥有weNEU，您再也不需要教务处网站。在这里，学期课表、本周课表、今日课表，学期成绩、历史成绩、绩点分析、考试日程一应俱全。</text>
+      <text class="desc-content">拥有weNEU，您再也不需要图书馆网站。在这里，快捷地搜索馆藏图书，获取馆藏信息，图书架位，告别传统查询方式。在这里，当前借阅，历史借阅，您再也不会错过任何信息。</text>
+      <text class="desc-content">拥有weNEU，手机查看校园卡即时余额、消费记录，再也不会有余额不足的尴尬。</text>
+      <text class="desc-content">拥有weNEU，您将便捷地了解校园的大事小情。在这里，我们聚合了东大新闻网、教务处、创新网、各学院官网等，小程序在手，校园大事小情我有。</text>
+      <text class="desc-content">weNEU还在测试阶段，有一系列新的功能正在我们的开发计划中。“你想要的，都在这里！”</text>
+      <text class="desc-title">联系我们</text>
+      <view class="desc-list">
+            <view bindtap='copyText' data-text="721423324" class="desc-list-item">用户交流QQ群：721423324（点击复制）</view>
+            <view bindtap='copyText' data-text="weneu2018@163.com" class="desc-list-item">申请成为weNEU开发者/运营者，请致信：weneu2018@163.com（点击复制）</view>
+      </view>
+      <text class="desc-title">致谢</text>
+      <view class="desc-list">
+        <text class="desc-list-item">We重邮，We川大微信小程序</text>
+        <text class="desc-list-item">东北大学软件学院团委</text>
+        <text class="desc-list-item">沈阳葫芦科技有限公司</text>
+        <text class="desc-list-item">软件学院杨巍老师、嘉宏学长和其他所有帮助我们测试推广的同学们</text>
+      </view>
+      <text class="desc-content">一起期待“美好的事情即将发生”！</text>
     </view>
     <view class="log-list" wx:else>
+       <view class="describe">
+        <view class="desc-title">
+          <text class="desc-v">v1.1 公测版</text>
+          <text class="desc-time">2018.9.13</text>
+        </view>
+        <text class="desc-content">你想要的，这里都有</text>
+        <view class="desc-list">
+          <text class="desc-list-item">新增一卡通信息查询</text>
+          <text class="desc-list-item">新增寻课</text>
+          <text class="desc-list-item">新增通讯录</text>
+          <text class="desc-list-item">新增帮助</text>
+          <text class="desc-list-item">优化自习展示效果</text>
+        </view>
+      </view>
       <view class="describe">
-          <view class="desc-title">
-            <text class="desc-v">v0.1 内测版</text>
-            <text class="desc-time">2018.6.10</text>
-          </view>
-          <text class="desc-content">开启内测</text>
-          <view class="desc-list">
-            <text class="desc-list-item">完成了一切初始功能。小程序正在迅速迭代完善中，准备参加中国高校微信小程序大赛</text>
-          </view>
+        <view class="desc-title">
+          <text class="desc-v">v1.0 公测版</text>
+          <text class="desc-time">2018.8.29</text>
+        </view>
+        <text class="desc-content">新学期新起点</text>
+        <view class="desc-list">
+          <text class="desc-list-item">正式开启小程序公测</text>
+        </view>
+      </view>
+       <view class="describe">
+        <view class="desc-title">
+          <text class="desc-v">v0.3 内测版</text>
+          <text class="desc-time">2018.7.25</text>
+        </view>
+        <text class="desc-content">图书馆功能上线</text>
+        <view class="desc-list">
+          <text class="desc-list-item">新增电视墙</text>
+          <text class="desc-list-item">新增资讯</text>
+        </view>
+      </view>
+      <view class="describe">
+        <view class="desc-title">
+          <text class="desc-v">v0.2 内测版</text>
+          <text class="desc-time">2018.7.22</text>
+        </view>
+        <text class="desc-content">图书馆功能上线</text>
+        <view class="desc-list">
+          <text class="desc-list-item">新增图书馆功能（搜索馆藏图书，查看当前借阅记录）</text>
+        </view>
+      </view>
+      <view class="describe">
+        <view class="desc-title">
+          <text class="desc-v">v0.1 内测版</text>
+          <text class="desc-time">2018.7.10</text>
+        </view>
+        <text class="desc-content">初代降临，内测开启</text>
+        <view class="desc-list">
+          <text class="desc-list-item">完成了教务功能（看课表，查成绩，搜考表，上自习，学籍查询）</text>
+        </view>
       </view>
     </view>
   </view>
   <view class="footer">
     <view class="footer-lanshan">
-        <image src="/images/more/neusc.png"></image>
-        <text>东北大学软件学院软英1601-1602</text>
+      <image src="/images/more/neusc.png"></image>
+      <text>东北大学软件学院软英1601-1602</text>
     </view>
-    <text>weNEU开发组 · weneu2018@163.com</text>
+    <text>weNEU校园生活 · www.weneu.xyz</text>
     <text>Copyright @ {{year}} All Rights Reserved</text>
   </view>
 </view>

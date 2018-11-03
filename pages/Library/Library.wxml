@@ -21,7 +21,8 @@
   </view>
 <scroll-view style="height:{{height}}px;" class="results"  enable-back-to-top scroll-y>
   <block wx:for="{{Blist}}" wx:key="index">
-        <view class="result" bindtap='showCourse'  data-location='{{item.location}}'data-searchno='{{item.searchno}}'>
+      <view wx:if="{{item.bookname!=null}}">
+        <view class="result" bindtap='showCourse'  data-location='{{item.location}}'data-searchno='{{item.searchno}}' >
           <image lazy-load class="image-book" src="{{item.img}}" ></image>
           <view class="info">
             <view class="row">
@@ -34,5 +35,7 @@
             </view>
           </view>
         </view>
+              </view>
+
       </block>
   </scroll-view>

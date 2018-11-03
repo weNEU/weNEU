@@ -1,0 +1,71 @@
+/* pages/zx/zx.wxss */
+.picker {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #555;
+}
+.box{
+    padding: 0.5rem;
+    display: flex;
+      flex-direction: column;
+
+font-size: 0.8rem;
+  color: #555;
+
+}
+.jie{
+    width: 673rpx;
+    padding-left: 40rpx;
+    border-bottom: 4rpx solid #555;
+
+}
+.show{
+      display: flex;
+      flex-direction:row;
+}
+.weui-grid {
+      padding-right: 10rpx;
+      padding-bottom: 10rpx;
+      padding-top: 10rpx;  
+      border: 0;
+      width: 14%
+}
+.text{
+      font-size:22rpx 
+
+}
+.table {
+  padding: 0.5rem;}
+.row {
+    background: #efefef;
+    box-shadow: 4rpx 4rpx 8rpx #ddd;
+    margin-top: 0.5rem;
+    display: flex;
+    align-content: center
+}
+.item {
+
+      color: #fffafa;
+      border-radius: 0.1rem;
+      text-align: center;
+}
+.use {
+      box-shadow: 4rpx 4rpx 4rpx #ccc;
+      background: red;
+      height: 100rpx;
+display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.not-use {
+      box-shadow: 4rpx 4rpx 4rpx #ccc;
+      background: #008e59;
+      height: 100rpx;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+ 

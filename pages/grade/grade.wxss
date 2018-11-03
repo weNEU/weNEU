@@ -83,7 +83,9 @@
     color: #999;
     font-size: 26rpx;
 }
-
+.shadow{
+    box-shadow: 0 10rpx 35rpx #dee1e8;
+}
 .cj-info-box{
     display: flex;
     flex-flow: column nowrap;

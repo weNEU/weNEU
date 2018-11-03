@@ -1,0 +1,54 @@
+/* pages/Help/help.wxss */
+
+page {
+  background: white;
+  font-size: 30rpx;
+  padding-bottom: 100rpx;
+}
+.card {
+  margin: 20rpx;
+  overflow: hidden;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 4rpx 4rpx 10rpx #eee;
+  background:white;
+
+}
+
+.active {
+color: red;
+}
+
+.info {
+      margin-top: 20rpx;
+      display: flex;
+      font-size: 26rpx;
+      color: #888;
+}
+
+ .view {
+        display: flex;
+        align-items: baseline;
+        margin-right: 30rpx;
+       
+      }
+    
+    
+  
+  .content {
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .active {
+      margin-top: 20rpx;
+    }
+  
+
+.mo-btn {
+  position: fixed;
+  bottom: 0;
+  width:750rpx;
+  color:white;
+  background-color: red;
+}

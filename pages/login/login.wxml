@@ -1,47 +1,47 @@
 <!--login.wxml-->
 <view class="container">
-
-  <block >
-      <image class="title" src="/images/more/text.gif"></image>
+  <block>
+    <image class="title" src="/images/more/text.gif"></image>
     <view class="content">
-    <view class="hd" style="transform:rotateZ({{angle}}deg);">
-          <image class="logo" src="/images/tabbar/NEU.png"></image>
-          <image class="wave" src="/images/tabbar/wave.png" mode="aspectFill"></image>
-          <image class="wave wave-bg" src="/images/tabbar/wave.png" mode="aspectFill"></image>
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="/images/tabbar/NEU.png"></image>
+        <image class="wave" src="/images/tabbar/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/tabbar/wave.png" mode="aspectFill"></image>
       </view>
       <view class="bd">
         <form class="login-form">
+          <text class="title_text">教务处</text>
           <view class="input-group {{userid_focus ? 'active' : ''}}">
-            <text class="input-label">帐号</text>
-            <input type="number" cursor-spacing="30" id="userid"  placeholder="请输入学号" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
+            <text class="input-label">账号</text>
+            <input type="number" cursor-spacing="30" id="userid" placeholder="请输入学号" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
           </view>
           <view class="input-group {{passwd_focus ? 'active' : ''}}">
             <text class="input-label">密码</text>
-            <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入密码" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" />
+            <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入教务处密码(默认密码为学号)" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" />
           </view>
-         
+          <switch class='switch' color="#8ec5fc" bindchange="switch2Change"/>
+          <text>研究生</text>
           <view class="login-help" bindtap="showHelp">
-            <image class="box-close-1" src="/images/more/help.png"  bindtap="hideHelp"></image>
-            <text>帮助</text>
+            <image class="box-close-1" src="/images/more/help.png" bindtap="hideHelp"></image>
+            <text>帮助-信息安全</text> 
           </view>
-         </form>
-         
-          <view class="confirm-btn" bindtap="bind">
-           
-            <text>确认绑定</text>
-          </view>
-           </view>
+        </form>
+
+        <view class="confirm-btn" bindtap="bind">
+          <text>确认绑定</text>
+        </view>
+      </view>
 
       <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
         <view class="box">
           <view class="box-hd">
-            <text class="box-title">帮助</text>
+            <text class="box-title">帮助-信息安全</text>
             <image class="box-close" src="/images/more/help.png" bindtap="hideHelp"></image>
           </view>
           <view class="box-bd">
-            <view class="help-q">1、帐号和密码是什么？</view>
+            <view class="help-q">1、账号和密码是什么？</view>
             <view class="help-a">
-              <text>帐号：学号（教务处登录账号）</text>
+              <text>账号：学号（教务处登录账号）</text>
               <text>密码：初始密码或已更改密码</text>
               <text>其中初始密码和学号一致，为了您的信息安全，我们强烈建议您修改初始密码</text>
             </view>
@@ -51,7 +51,9 @@
             </view>
             <view class="help-q">3、我的信息安全吗？</view>
             <view class="help-a">
-              <text>weNEU不收集用户的任何信息，包括您的账号密码，查询结果等等</text>
+              <text>weNEU不收集任何用户信息，包括您的账号密码，查询结果等等</text>
+              <text>您输入的账号及密码都存在本地微信客户端，微信有多安全您的信息就有多安全</text>
+              <text>您使用weNEU时所有查询过程全部基于https协议，尽全力保障您的信息不会被窃取</text>
             </view>
           </view>
         </view>

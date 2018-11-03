@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "图书搜索",
-      "navigationBarBackgroundColor": "#8ec5fc"
-  }
+  "navigationBarTitleText": "图书馆-馆藏图书检索",
+  "navigationBarTextStyle": "white",
+      "navigationBarBackgroundColor": "#FF83FA"
+  } 

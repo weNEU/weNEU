@@ -1,0 +1,7 @@
+<!--pages/developing/developing.wxml-->
+<view class="container">
+  <image src="/images/icon/developing.svg" class='pic'></image>
+  <text class="msg">网关登录/断开，余额用量查询</text>
+  <text class="msg">·</text>
+  <text class="msg">全新IP网关即将上线···</text>
+</view>

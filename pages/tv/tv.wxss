@@ -1,0 +1,30 @@
+/* pages/IP/ip.wxss */
+page{
+  padding-left: 5%;
+
+}
+.con{
+  padding-top: 5%;
+}
+.Video{
+  width: 670rpx;
+  height: 490rpx;
+  border-radius: 10px;
+  box-shadow: 10rpx 10rpx 10rpx #dee1e8;
+
+}
+.text{
+  padding-left: 3%;
+  font-size: 11pt;
+  color: #666;
+  padding-top: 0%;
+
+}
+.img{
+  width: 670rpx;
+  height: 410rpx;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-bottom: 0%;
+
+}

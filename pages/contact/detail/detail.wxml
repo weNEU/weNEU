@@ -1,0 +1,27 @@
+<view class = "container-self">
+
+ <view class='place' >
+     <view class = "item-text">
+     <text>{{placename}}</text>
+      </view>
+     <image class="image" src="/images/more/url.png" mode='widthFix' bindtap='copy'></image>
+  </view>
+  <view class = "whole">
+      <view wx:for="{{data}}" class = "item-box" >
+         <view class = "item-left">
+             <view class= "item_font" >单位：</view>
+             <view class= "item_font" >联系方式：</view>
+         </view>
+         <view  class = "item-right"  >
+             <view class= "item_font">{{item.department}}</view>
+             <view id="{{index}}" class= "item_font" bindtap='bind'>{{item.tele}}</view>
+         </view>
+      </view>
+
+      <view style='text-align : center ; margin-top : 40rpx ; margin-bottom : 40rpx'>
+          没有更多了
+
+
+      </view>
+  </view>
+</view>

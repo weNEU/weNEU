@@ -89,6 +89,7 @@
     height: 48rpx;
 }
 .image-info{
+  padding-top: 15rpx;
   width:90%;
-  text-align: center;
+  margin: 0 auto;
 }

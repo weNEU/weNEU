@@ -1,0 +1,17 @@
+/* pages/developing/developing.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pic {
+  width: 300rpx
+}
+
+.msg{
+  font-size: 50rpx
+}

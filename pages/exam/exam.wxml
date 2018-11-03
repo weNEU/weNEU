@@ -1,0 +1,21 @@
+<!--pages/Test/Test.wxml-->
+<view class="container">
+        <view class="ks-header">
+            <view class="ks-text">
+                <text class="ks-header-title">2018-2019学年秋季学期</text>
+            </view>
+        </view>
+        <view wx:if="{{!isNull}}" >
+            <view class='card' >
+            <icon type="waiting" size="80" class='pic'/>
+             <text class="msg">暂无考试</text>
+            </view>
+        </view>
+        <view wx:else> 
+        <wux-cell-group>
+          <view wx:for="{{ksInfo}}" wx:if="{{item.name!=null}}">  
+            <wux-cell title="{{item.name}}"  label="{{item.classroom}}" extra="{{item.time}}"></wux-cell>
+          </view>
+        </wux-cell-group>
+        </view>
+</view>

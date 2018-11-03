@@ -1,0 +1,44 @@
+<view class="container">
+        <text class="title">| 校色</text>
+        <image src="http://www.neualumni.org.cn/leader/logo4.gif" mode="widthFix" class="img-full"></image>
+        <text>C-100 M-70</text>
+
+        <text class="title">| 校标</text>
+        <image src="http://www.neualumni.org.cn/leader/logo1.gif" mode="widthFix" class="img-half"></image>
+        <image src="http://www.neualumni.org.cn/leader/logo2.gif" mode="widthFix" class="img-half"></image>
+        <image src="http://www.neualumni.org.cn/leader/logo3.gif" mode="widthFix" class="img-half"></image>
+
+        <text class="title">| 张学良题书校名</text>
+        <image src="http://www.neu.edu.cn/assets/photo/photo_name.jpg" mode="widthFix" class="img-half"></image>
+        <text>“千古功臣”张学良老校长在1992年为东北大学复名题书的校名。</text>
+        
+        <text class="title">| 校训</text>
+        <text >自强不息、知行合一</text>
+
+        <text class="title">| 校风</text>
+        <text >献身、求实、团结、创新</text>
+
+        <text class="title">| 校旗</text>
+        <image src="http://www.neualumni.org.cn/leader/q1.gif" mode="widthFix" class="img-half"></image>
+        <image src="http://www.neualumni.org.cn/leader/q2.gif" mode="widthFix" class="img-half"></image>
+
+        <text class="title">| 校歌</text>
+        <text >词 刘半农 曲 赵元任 
+
+                      白山兮高高，黑水兮滔滔； 
+                      有此山川之伟大，故生民质朴而雄豪。 
+                      地所产者丰且美，俗所习者勤与劳。 
+                      愿以此为基础，应世界进化之洪潮。 
+                      沐春风时雨之德化，仰光天化日之昭昭。 
+                      惟知行合一方为贵，惟自强不息方登高。 
+                      爱校、爱乡、爱国、爱人类。 
+                      期终达于世界大同之目标。 
+                      啊！使命如此其重大，能不奋勉乎吾曹？ 
+                      能不奋勉乎吾曹？</text>
+
+        <text class="title">| 设计</text>
+        <image src="http://www.neualumni.org.cn/leader/VI1.gif" mode="widthFix" class="img-full"></image>
+        <image src="http://www.neualumni.org.cn/leader/VI2.gif" mode="widthFix" class="img-full"></image>
+        <image src="http://www.neualumni.org.cn/leader/VI3.gif" mode="widthFix" class="img-full"></image>
+        <image src="http://www.neualumni.org.cn/leader/VI4.gif" mode="widthFix" class="img-full"></image>
+</view>
