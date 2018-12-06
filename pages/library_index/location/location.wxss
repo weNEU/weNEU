@@ -1,0 +1,32 @@
+/**detail.wxss (common)**/
+.container{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    background-color:#F1F1F1;
+
+}
+.img-full{
+    margin-left:0rpx;
+    text-align: center;
+    width: 750rpx;
+}
+
+.img-full2{
+  margin-top: 50rpx;
+    margin-left:0rpx;
+    text-align: center;
+    width: 750rpx;
+}
+.img-half{
+    width: 375rpx;
+    text-align: center;
+    margin-left: 187.5rpx;
+    margin-top: 30rpx;
+}
+.comment{
+  text-align: center;
+  margin-left: 278.5rpx;
+  font-size: 170%;
+}

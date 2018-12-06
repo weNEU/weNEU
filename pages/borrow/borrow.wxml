@@ -1,5 +1,5 @@
 <!--pages/jy/jy.wxml-->
-<view wx:if="{{loan!=null}}">
+<view wx:if="{{loan!=null}}" style='margin: 30rpx'>
   <block wx:for="{{loan}}" wx:key="{{index}}">
     <view class="book">
       <view class="title">{{item.name}}</view>
@@ -13,7 +13,7 @@
   </block>
 </view>
 <view wx:else>
-    <view class='card'>
+    <view class='card' style='margin: 30rpx'>
       <icon type="waiting" size="80" class='pic' />
       <text class="msg">您当前没有任何在借单册</text>
     </view>

@@ -1,7 +1,9 @@
 {
   "enablePullDownRefresh": true,
+  "backgroundColor": "#78BBE6",
   "usingComponents": {
     "wux-button": "../../dist/button/index",
-    "wux-toptips": "../../dist/toptips/index"
+    "wux-toptips": "../../dist/toptips/index",
+    "van-popup": "../../dist_vant/popup/index"
   }
 }

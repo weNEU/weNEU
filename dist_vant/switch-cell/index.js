@@ -1,12 +1,10 @@
-Component({
-  options: {
-    addGlobalClass: true
-  },
-
-  properties: {
+import { VantComponent } from '../common/component';
+VantComponent({
+  field: true,
+  props: {
     title: String,
-    checked: Boolean,
     border: Boolean,
+    checked: Boolean,
     loading: Boolean,
     disabled: Boolean,
     size: {
@@ -14,10 +12,21 @@ Component({
       value: '26px'
     }
   },
-
+  watch: {
+    checked: function checked(value) {
+      this.setData({
+        value: value
+      });
+    }
+  },
+  created: function created() {
+    this.setData({
+      value: this.data.checked
+    });
+  },
   methods: {
-    onChange(event) {
-      this.triggerEvent('change', event.detail);
+    onChange: function onChange(event) {
+      this.$emit('change', event.detail);
     }
   }
 });

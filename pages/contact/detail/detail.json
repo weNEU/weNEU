@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "校园通讯录",
+  "usingComponents": {
+    "demo-block": "../../../dist_vant/demo-block/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "图书馆-馆藏布局",
+  "usingComponents": {
+    "van-tab": "../../../dist_vant/tab/index",
+    "van-tabs": "../../../dist_vant/tabs/index"
+  }
+}

@@ -8,17 +8,15 @@
       </block>
     </scroll-view>
     <scroll-view class="swiper-tab" scroll-x="true">
-      <block wx:for="{{list[page].subType}}">
+      <block wx:for="{{list[page].subType}}" wx:key="key">
         <view class="swiper-tab-list {{currentTab==index+1? 'on' : ''}}" data-current="{{index+1}}" bindtap="swichNav">{{item}}</view>
       </block>
     </scroll-view>
   </view>
 
   <!-- <swiper-tap> -->
-
-
   <swiper current="{{currentTab-1}}" autoplay='{{false}}' class='swiper-box' style='height:{{(currentPage+1)*(currentHeight)*138+300}}rpx ; ' bindchange='swiper_bindchange' wx:if="{{page==0}}">
-    <swiper-item class="swiper-item" wx:for="{{list[page].subType}}">
+    <swiper-item class="swiper-item" wx:for="{{list[page].subType}}" wx:key="key">
       <!--新闻列表-->
       <view class="content">
         <view class="loader" wx-if="{{loading}}">
@@ -96,7 +94,5 @@
         <text>{{active.remind}}</text>
       </view>
     </swiper-item>
-
-
   </swiper>
 </view>

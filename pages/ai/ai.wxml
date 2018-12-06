@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="button">
+    <view class="button-text" bindtap="doChooseImage">
+      <text>从相册选择</text>
+    </view>
+    <view class="button-text" bindtap="doTakePhoto">
+      <text>拍照识狗</text>
+    </view>
+  </view>
+</view>

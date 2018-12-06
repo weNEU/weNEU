@@ -1,5 +1,6 @@
 {
-  "navigationBarTitleText": "教务-寻课",
-  "navigationBarTextStyle": "white",
-      "navigationBarBackgroundColor": "#8ec5fc"
-  } 
+  "navigationBarTitleText": "教务处-蹭课搜寻",
+  "usingComponents": {
+    "demo-block": "../../dist_vant/demo-block/index"
+  }
+}

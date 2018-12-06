@@ -1,6 +1,5 @@
 /**about.wxss**/
 .container{
-    background: #f4f4f4;
     padding: 0;
     font-size: 11pt;
 }
@@ -41,7 +40,6 @@
     height: 750rpx;
     border-radius: 10rpx;
     margin-top: -175rpx;
-    filter: blur(15px);
 }
 .content{
     flex: 1;

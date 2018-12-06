@@ -1,5 +1,8 @@
 {
-    "navigationBarTitleText": "导览",
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#9ACD32"
+  "navigationBarTitleText": "导览-自强不息，知行合一",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-tab": "../../dist_vant/tab/index",
+    "van-tabs": "../../dist_vant/tabs/index"
   }
+}

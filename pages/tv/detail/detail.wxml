@@ -1,4 +1,10 @@
 <!--pages/IP/detail/detail.wxml-->
-<view class="section tc">
-  <video class='video'src="{{address}}" controls autoplay="true"></video>
+<view>
+  <video class='video' src="{{address}}" controls autoplay="true"></video>
 </view>
+
+<demo-block title="提示">
+  <view class="last-info">
+    <text>直播信号源来自「东北大学IPv6视频直播测试站」(https://hdtv.neu6.edu.cn)。感谢直播站提供的技术支持。\n在校园网环境下观看直播视频高清免流量。</text>
+  </view>
+</demo-block>

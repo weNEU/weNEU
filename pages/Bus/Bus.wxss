@@ -1,21 +1,16 @@
-/* pages/Bus/Bus.wxss */
-
-page {
-  background-color: #edf8f7;
+.card {
+  padding: 30rpx;
 }
 
-.image_s {
-  padding: 6%;
-}
-
-.image_j {
-  padding: 6%;
+.info-image {
+  margin-top: 30rpx;
 }
 
 .text {
-  font-size: 12pt;
-  padding: 4%;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
   align-items: center;
   text-align: center;
-  color: #111;
+  color: #444;
+  padding: 20rpx;
 }

@@ -1,5 +1,11 @@
 <!--pages/Bus/Bus.wxml-->
-<text class='text'>学生班车时刻</text>
-<image src="https://wxapi.hotapp.cn/proxy/?appkey=hotapp477295126&url=http://www.weneu.xyz/weNEU/images/bus_student.jpg" />
-<text class='text'>教师班车时刻</text>
-<image  src="https://wxapi.hotapp.cn/proxy/?appkey=hotapp477295126&url=http://www.weneu.xyz/weNEU/images/bus_teacher.jpg" />
+<view class="weui-panel card-border-view card">
+  <text class='text'>学生班车时刻</text>
+  <image class='info-image' src="http://hnxqgwh.neu.edu.cn/userfiles/image/20180827/20180827144557_90933.jpg" mode="widthFix" />
+</view>
+
+<view class="weui-panel card-border-view card">
+  <text class='text'>教师班车时刻</text>
+  <image class='info-image' src="http://hnxqgwh.neu.edu.cn/userfiles/image/20180827/20180827144435_93213.jpg" mode="widthFix" />
+    <image class='info-image' src="http://hnxqgwh.neu.edu.cn/userfiles/image/20180827/20180827144435_45238.jpg" mode="widthFix" />
+</view>

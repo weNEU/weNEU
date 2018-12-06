@@ -1,0 +1,7 @@
+.mo-btn {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  color: white;
+  background-color: #78bbe6;
+}

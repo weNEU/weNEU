@@ -17,19 +17,29 @@ weNEU由东北大学软件学院16级软英专业的几名同学共同开发，�
 <img src="https://github.com/weNEU/weNEU/blob/master/weneuqr.jpg?raw=true" width="140">
 
 ## 联系我们
->用户交流QQ群:721423324  
->申请加入/合作，请致信:xrwgood@qq.com  
->官方网站:[www.weneu.xyz](www.weneu.xyz)  
->GitHub仓库地址:[https://github.com/weNEU/weNEU](https://github.com/weNEU/weNEU)
+>用户交流QQ群: 721423324  
+>申请加入「weNEU开放平台」成为weNEU开发者/运营者，请联系QQ: 1413212069  
+>官方网站: [www.weneu.xyz](www.weneu.xyz)  
+>GitHub仓库地址: [https://github.com/weNEU/weNEU](https://github.com/weNEU/weNEU)  
 
 ## 开源协议
 项目分为三部分，由于安全政策的考量目前暂未全部开源
-- 小程序客户端(部分开源。即本仓库，隐去了部分具有敏感信息的js文件)
+- 小程序客户端(完全开源)
 - 服务器端(暂未开源)
 - [服务器端旧版本](https://github.com/Raven98/NEUspider)(全部开源，旧版本用PHP编写，出于业务长远考量已经重构为Java)
 - 安卓客户端(开发中，暂未开源)
 
 ## 更新日志
+### v1.2.0
+2018/12/01
+
+- 新增IP网关
+- 新增历史成绩查询
+- 新增导览
+- 新增公告
+- 整合图书馆功能
+- 优化整体UI(覆盖全部30多个界面，优化到每一个像素点)
+- 其他性能优化
 
 ### v1.1.7
 

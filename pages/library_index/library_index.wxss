@@ -1,0 +1,17 @@
+Page{
+  background-color: #F1F1F1;
+}
+
+.card-list{
+  margin-top: 30rpx;
+}
+
+.card{
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.card-image{
+  border-radius: 15rpx;
+  overflow: hidden;
+}

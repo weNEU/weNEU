@@ -1,14 +1,18 @@
 /**detail.wxss (common)**/
 .container{
-    background: #fff;
     padding-left: 0;
     padding-right: 0;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    background-color:#F1F1F1;
+
 }
-.divLine{
-    background: #E0E3DA;
-    width: 100%;
-    height: 5rpx;
-   }
+.container1{
+    margin-left: 0;
+    margin-right: 0;
+    background-color:#fff;
+
+}
 .title{
     font-size: 18pt;
     font-weight: bold;
@@ -16,78 +20,37 @@
     line-height: 140%;
     word-break: break-all;
 }
-.info{
-    margin-top: 30rpx;
-    color: #b2b2b2;
-
-}
-.info text{
-    padding: 0 20rpx 0 5rpx;
-}
-.detail{
-    font-size: 12pt;
-    line-height: 150%;
-    padding: 50rpx 15rpx 200rpx;
-    word-break: break-all;
-    text-align: justify;
-    width: 95%;
-}
-
-.content-img{
-    text-align: center;
-    width:690rpx;
-    display: table-cell; 
-    vertical-align: middle;
-}
-
-.content-img-long{
-    text-align: center;
-    width:690rpx;
-    height: 800rpx;
-    display: table-cell; 
-    vertical-align: middle;
-}
-
-.title2{
-    padding-top: 30rpx;
-    font-size: 14pt;
-    font-weight: bold;
-    word-break: break-all;
-	color: #000000;
-    text-align: center;
-}
-
-.notify{
-    font-size: 12pt;
-    font-weight: bold;
-	color: #FF0000;
-    text-align: center;
-}
-
-.comment{
-    font-size: 9pt;
-    text-align: center;
-}
-
-.title1-blue{
-    font-size: 13pt;
-    text-align: center;
-    color: #004dff;
-}
-.title2-center{
-    font-size: 13pt;
-    text-align: center;
-}
-.copy-content{
-    font-size: 12pt;
-}
 
 .img-full{
     margin-left:0rpx;
     text-align: center;
     width: 750rpx;
 }
+
 .img-half{
-    text-align: center;
     width: 375rpx;
+    text-align: center;
+    margin-left: 187.5rpx;
+    margin-top: 30rpx;
+}
+
+.detail{
+    font-size: 30rpx;
+    line-height: 150%;
+    padding: 50rpx 15rpx 200rpx;
+    word-break: break-all;
+    text-align: justify;
+    width: 95%;
+    color: #444;
+}
+
+.detail-2{
+    font-size: 30rpx;
+    line-height: 150%;
+    word-break: break-all;
+    text-align: justify;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top: 30rpx;
+    color: #444;
 }

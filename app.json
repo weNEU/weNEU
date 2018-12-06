@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/study/study",
+    "pages/ipgw/ipgw",
+    "pages/grade/grade",
+    "pages/library/library",
+    "pages/search/search",
+    "pages/bus/bus",
+    "pages/calendar/calendar",
+    "pages/news/news",
+    "pages/reward/reward",
+    "pages/notice/notice",
+    "pages/tv/tv",
+    "pages/help/help",
+    "pages/guide/guide",
+    "pages/contact/contact",
+    "pages/card/card",
+    "pages/exam/exam",
+    "pages/navigate/navigate",
+    "pages/index/detail/detail",
+    "pages/library_index/library_index",
+    "pages/library_index/location/location",
+    "pages/table/table",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/contact/detail/detail",
+    "pages/about/about",
+    "pages/news/detail/detail",
+    "pages/tv/detail/detail",
+    "pages/borrow/borrow",
+    "pages/login_lib/login_lib",
+    "pages/login_ykt/login_ykt",
+    "pages/setting/setting",
+    "pages/issue/issue",
+    "pages/ai/ai",
+    "pages/ai/photo",
+    "pages/navigate/web/web",
+    "pages/search/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#78BBE6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "weNEU-吾爱吾校",
+    "backgroundTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#F1F1F1",
+    "borderStyle": "white",
+    "color": "#78BBE6",
+    "selectedColor": "#78BBE6",
+    "list": [
+      {
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home@select.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/icon/news.png",
+        "selectedIconPath": "images/icon/news@select.png",
+        "pagePath": "pages/news/news",
+        "text": "资讯"
+      },
+      {
+        "iconPath": "images/icon/user.png",
+        "selectedIconPath": "images/icon/user@select.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

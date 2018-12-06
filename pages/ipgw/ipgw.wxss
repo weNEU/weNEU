@@ -1,3 +1,11 @@
-.container{
-  background-color: #ffffff;
+.ipgw-button {
+  margin-right: 30rpx;
+}
+
+.ipgw-button-list {
+  margin-left: 185rpx;
+}
+
+.ipgw-button-direct {
+  margin-left: 291rpx;
 }

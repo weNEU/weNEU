@@ -1,5 +1,3 @@
-/* pages/Cal/Cal.wxss */
-image{
-  width: 775rpx;
-  height: 1064rpx;
+cal-image{
+  width: 750rpx;
 }

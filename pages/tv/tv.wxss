@@ -1,30 +1,27 @@
-/* pages/IP/ip.wxss */
-page{
+.channel-card-list {
   padding-left: 5%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
 
-}
-.con{
-  padding-top: 5%;
-}
-.Video{
+.video {
   width: 670rpx;
-  height: 490rpx;
+  height: 440rpx;
   border-radius: 10px;
-  box-shadow: 10rpx 10rpx 10rpx #dee1e8;
-
+  box-shadow: 3rpx 3rpx 10rpx #686565;
+  background-color: #fff;
 }
-.text{
+
+.text {
   padding-left: 3%;
   font-size: 11pt;
   color: #666;
   padding-top: 0%;
-
 }
-.img{
+
+.img {
   width: 670rpx;
-  height: 410rpx;
+  height: 376rpx; /* 16:9 最适合人眼的比例 */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding-bottom: 0%;
-
 }

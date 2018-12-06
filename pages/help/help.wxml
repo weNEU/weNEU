@@ -1,22 +1,9 @@
 <!--pages/Help/help.wxml-->
-<view>
-    <!-- <search title="请输入关键词"></search> -->
-    <block wx:for="{{items}}" wx:key="index">
-      <view id = "{{index}}" bindtap="active" class="card">
-        <view class="header">
-          <view class="title">{{item.title}}</view>
-          <view class="info">
-            <view class="user">
-              <view class="iconfont icon-user"></view>
-              <view class="">管理员　</view>
-            </view>
-            <view class="time">
-              <view class="iconfont icon-time"></view>
-              <view class="">{{item.created_at}}</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </block>
-    <button bindtap="to" class="mo-btn">没有答案？我要反馈</button>
-  </view>
+<van-cell-group>
+  <block wx:for="{{items}}" wx:key="index">
+    <view id="{{index}}" bindtap="active">
+      <van-cell title="{{item.title}}" label="管理员　{{item.created_at}}" icon="question" is-link />
+    </view>
+  </block>
+</van-cell-group>
+<button bindtap="to" class="mo-btn">没有答案？我要反馈</button>

@@ -1,41 +1,45 @@
-
-<view class="container {{main.mainDisplay?'home':'active'}}">
-<view class="header">
+<view class="{{main.mainDisplay?'home':'active'}}">
+  <view class="header">
     <!--搜索框-->
     <view class="search-input">
       <view class="search-icon-box">
         <image class="search-icon" src="/images/core/xs/search-sign.png"></image>
       </view>
-      <form class="input-form" >
-        <input class="input-text"  bindinput="bindSearchInput" type="text" name="search" placeholder="图书名称"  />
-        <button class="input-clear-button" formType="reset" hover-class="none" >
+      <form class="input-form">
+        <input class="input-text" bindinput="bindSearchInput" type="text" name="search" placeholder="图书名称" />
+        <button class="input-clear-button" formType="reset" hover-class="none">
           <image class="clear-icon" src="/images/core/xs/clear.png"></image>
         </button>
-        <button class="input-confirm-button" bindtap='Search' formType="submit" hover-class="none" >
+        <button class="input-confirm-button" bindtap='Search' formType="submit" hover-class="none">
           <text>搜索</text>
         </button>
       </form>
     </view>
   </view>
-  
-  </view>
-<scroll-view style="height:{{height}}px;" class="results"  enable-back-to-top scroll-y>
+
+</view>
+<scroll-view style="height:{{height}}px;" class="results" enable-back-to-top scroll-y>
   <block wx:for="{{Blist}}" wx:key="index">
-      <view wx:if="{{item.bookname!=null}}">
-        <view class="result" bindtap='showCourse'  data-location='{{item.location}}'data-searchno='{{item.searchno}}' >
-          <image lazy-load class="image-book" src="{{item.img}}" ></image>
-          <view class="info">
-            <view class="row">
-              <view>{{item.bookname}}</view>
-            </view>
-            <view class="press">
-              <view>{{item.press}}</view>
-              <view>{{item.author}}</view>
-              <view>{{item.year}}</view>
-            </view>
+    <view wx:if="{{item.bookname!=null}}">
+      <view class="result" bindtap='showCourse' data-location='{{item.location}}' data-searchno='{{item.searchno}}'>
+        <image lazy-load class="image-book" src="{{item.img}}"></image>
+        <view class="info">
+          <view class="row">
+            <view>{{item.bookname}}</view>
+          </view>
+          <view class="press">
+            <view>{{item.press}}</view>
+            <view>{{item.author}}</view>
+            <view>{{item.year}}</view>
           </view>
         </view>
-              </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
 
-      </block>
-  </scroll-view>
+<demo-block title="提示">
+  <view class="last-info">
+    <text>请输入任意书籍的名称，搜索结果包括与名称关键字匹配的书籍列表。您可以点击图书查看该书的详细架位及馆藏数量(总数/在馆数量)\n更强大的馆藏检索正在开发中，敬请期待！</text>
+  </view>
+</demo-block>

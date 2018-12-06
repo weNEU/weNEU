@@ -1,5 +1,6 @@
 {
-          "navigationBarTitleText": "教务-自习室查询",
-              "navigationBarBackgroundColor": "#8ec5fc",
-              "navigationBarTextStyle": "white"
+  "navigationBarTitleText": "教务处-空闲教室查询",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#78BBE6",
+  "backgroundColor": "#78BBE6"
 }

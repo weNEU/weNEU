@@ -1,7 +1,11 @@
 {
-    "navigationBarTitleText": "教务-课表查询",
-    "navigationBarTextStyle": "#8ec5fc",
-    "navigationBarBackgroundColor": "#8ec5fc",
-      "enablePullDownRefresh": true
-      
+  "navigationBarTitleText": "教务处-课表查询",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-search": "../../dist_vant/search/index",
+    "van-panel": "../../dist_vant/panel/index",
+    "van-row": "../../dist_vant/row/index",
+    "van-col": "../../dist_vant/col/index"
+  }
 }

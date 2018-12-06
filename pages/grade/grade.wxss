@@ -1,130 +1,78 @@
-/* pages/grade/grade.wxss */
-.container{
-    padding-left: 30rpx;
-    padding-right: 30rpx;
-
-}
-.cj-header{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50rpx 0;
-}
-.cj-text{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    padding-left: 25rpx;
-}
-.cj-header-title{
-    font-size: 20pt;
-    font-weight: bold;
-    line-height: 150%;
-    margin-bottom: 15rpx;
-    color: #222;
-}
-.cj-header-gpa{
-    font-size: 15pt;
-    font-weight: bold;
-    line-height: 150%;
-    margin-bottom: 15rpx;
-    color: #222;
-}
-.cj-header-info{
-    font-size: 11pt;
-    line-height: 160%; 
-    color: #888;
-    
+.grade {
+  margin: 20rpx 20rpx 30rpx;
 }
 
-.cj-bg{
-    display: block;
-    width: 200rpx;
-    height: 200rpx;
-    padding-right: 5rpx;
-    opacity: .3;
+.header {
+  box-shadow: 4rpx 4rpx 10rpx #ddd;
 }
 
-.cj-info-ctn{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    border-radius: 3px;
-    background: #fff;
-    margin-bottom: 50rpx;
-    padding-left: 7%;
-    padding-right: 6%;
-}
-.cj-grade{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 25rpx 30rpx;
-}
-.cj-grade-logo{
-    width: 100rpx;
-    height: 100rpx;
+.grade-header {
+  border-radius: 0.2rem;
 }
 
-.cj-grade-term{
-    flex: 1;
-    padding-left: 30rpx; 
-    color: #666;
-    font-size: 11pt;
-    line-height: 160%;
-}
-.cj-grade-fst{
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.grade-comment{
-    color: #999;
-    font-size: 26rpx;
-}
-.shadow{
-    box-shadow: 0 10rpx 35rpx #dee1e8;
-}
-.cj-info-box{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    padding: 15rpx;
-    box-shadow: 0 10rpx 35rpx #dee1e8;
-}
-.cj-info{
+.title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px dotted #e5e5e5;
 }
-.cj-info-left{
-  flex: 1 1 auto;
+
+.none {
+  text-align: center;
+  background: #fff;
+}
+
+.grade-header {
+  background: #78bbe6;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.comment {
+  margin-top: 0.3rem;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.title {
+  display: block;
+}
+
+.info {
+  font-size: 30rpx;
   display: flex;
-  flex-direction: column;
-  padding-top: 12rpx;
-  padding-right: 30rpx;
-  overflow: hidden;
+  justify-content: space-between;
+  padding-top: 0.5rem;
 }
-.cj-info-what{
-  font-size: 10pt;
-  color: #777;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding: 10rpx
+
+.grade-lists {
+  background: #fff;
+  border-radius: 0.2rem;
+  display: block;
+  box-shadow: 4rpx 4rpx 4rpx #ddd;
 }
-.cj-info-wh{
-   font-size: 14pt;
-  color: #000;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  overflow: hidden;
+
+.grade-lists .grade-list {
+  display: flex;
+  color: #666;
+  font-size: 30rpx;
+  padding: 0.2rem 0.5rem;
 }
-.cj-info-socre{
-  flex: 0 0 auto;
-  font-size: 16pt;
-  color: #999;
-  letter-spacing: 1px;
+
+.grade-lists .grade-list.select {
+  background: #ddd !important;
+}
+
+.grade-lists .grade-list:nth-child(2n + 1) {
+  background-color: #f8f8f8;
+}
+
+.grade-lists .grade-list text {
+  padding: 0.1rem;
+  display: table-cell;
+  flex: 1;
+}
+
+.grade-lists .grade-list text:nth-child(1) {
+  flex: 4;
 }

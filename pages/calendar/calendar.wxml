@@ -1,2 +1,5 @@
-<!--pages/Cal/Cal.wxml-->
-<image class="image" src="https://wxapi.hotapp.cn/proxy/?appkey=hotapp477295126&url=http://www.weneu.xyz/weNEU/images/calendar2018-2019.jpg" />
+<image src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsg7z2588j310c0604f1.jpg" mode="widthFix" style="width: 750rpx;" />
+<image src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsg5rqhdzj30l81587wi.jpg" mode="widthFix" style="width: 750rpx;" />
+<image src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsg8x7o28j30l60qie81.jpg" mode="widthFix" style="width: 750rpx;" />
+<image src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsg9i0kv3j30l80dy1eo.jpg" mode="widthFix" style="width: 750rpx;" />
+<image src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsg9wilqdj314o0gcb29.jpg" mode="widthFix" style="width: 750rpx;" />
