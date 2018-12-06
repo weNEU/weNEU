@@ -1,225 +1,144 @@
 /* pages/ykt/ykt.wxss */
-page{
+
+page {
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
   font-size: 10pt;
   line-height: 150%;
-  color: #666;
-  min-height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
+
 .container {
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   padding-bottom: 100rpx;
   box-sizing: border-box;
-  background-color: #f7f7f7;
-  padding-left: 30rpx;
-  padding-right: 30rpx;
-} 
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f1f1f1;
+  margin-top: 20rpx;
+}
 
+/* 余额 */
 
-/* 今日余额 */
 .ykt-card {
-    display: flex;
-    flex-direction: column;
-    height: 350rpx;
-    margin: 15rpx 50rpx 45rpx;
-    background: #ffcb63;
-    border-radius: 15rpx;
-    box-shadow: 5rpx 5rpx 15rpx #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 350rpx;
+  margin: 15rpx 30rpx 45rpx;
+  background: #78bbe6;
+  border-radius: 15rpx;
+  box-shadow: 5rpx 5rpx 15rpx #ccc;
 }
+
 .ykt-black-line {
-    width: 100%;
-    height: 80rpx;
-    margin: 40rpx 0 0;
-    background: #7b7b7b;
+  width: 100%;
+  height: 80rpx;
+  margin: 40rpx 20rpx 0;
+  /* background: #7b7b7b; */
 }
+.card-bg-neu{
+  width: 300rpx;
+}
+
 .ykt-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .ykt-ye {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-right: 50rpx;
-    color: #777;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 50rpx;
+  color: #777;
 }
+
 .ykt-ye-name {
-    font-size: 11pt;
-    line-height: 50rpx;
-    padding-left: 30rpx;
+  font-size: 11pt;
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  color: white;
 }
+
 .ykt-ye-money {
-    text-align: center;
-    font-size: 10pt;
+  text-align: center;
+  font-size: 10pt;
+  color: white;
 }
+
 .ykt-ye-value {
-    font-size: 36pt;
-    font-weight: bold;
-    line-height: 80rpx;
-    padding-right: 25rpx;
+  font-size: 36pt;
+  font-weight: bold;
+  line-height: 80rpx;
+  padding-right: 25rpx;
 }
+
 .ykt-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
 }
+
 .ykt-img image {
-    width: 125rpx;
-    height: 125rpx;
-    padding: 20rpx 30rpx;
-}
-.ykt-card-more {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 5rpx 25rpx 10rpx 25rpx;
-    line-height: 100%;
-    opacity: .6;
-}
-.ykt-ye-time {
-    font-size: 9pt;
-}
-.ykt-ye-id {
-    font-size: 10pt;
+  width: 125rpx;
+  height: 125rpx;
+  padding: 20rpx 30rpx;
 }
 
-/* canvas */
-.grid-remind {
-    padding-left: 40rpx;
-    color: #999;
-    margin-bottom: 25rpx;
+/* 流水 */
+
+.title {
+  margin-bottom: 10rpx;
+  margin-left: 30rpx;
+  color: #888;
+  font-size: 24rpx;
 }
 
-/* 余额、消费切换按钮 */
-.balance-consumption {
-    display: flex;
-    margin: 0 45rpx 10rpx;
-    border-radius: 5px;
-    box-shadow: 0 0 10rpx #ddd;
-    overflow: hidden;
-}
-.balance-consumption text {
-    flex: 1;
-    flex-shrink: 0;
-    line-height: 150%;
-    font-size: 10pt;
-    padding: 12rpx 0;
-    font-weight: bold;
-    text-align: center;
-    background: #fff;
-}
-.balance-consumption .current-btn {
-    color: #fff;
-    background: #ffcb63;
+.trans {
+  border-radius: 0.5rem;
+  box-shadow: 2rpx 2rpx 20rpx #ccc;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  font-size: 25rpx;
+  text-align: center;
 }
 
-/* 网格 */
-.grid-wraper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 50rpx;
-    width: 100%;
-    height: 300px;
-}
-#ykt-canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+.trans .thead.tr {
+  background: #78bbe6;
+  color: #fff;
+  border-bottom: none;
 }
 
-/* 详情竖线 */
-.line {
-    position: absolute;
-    z-index: 999;
-    top: 15px;
-    height: 265px;
-    width: 3px;
-    background: #e78ab0;
+.trans .tr {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  color: #666;
+  padding: 0.3rem;
 }
 
-/* 横纵坐标的含义 */
-.y-text {
-    position: absolute;
-    left: 15rpx;
-    top: -40rpx;
-    padding: 0 10rpx;
-    font-size: 24rpx;
-    color: #999;
-}
-.x-text{
-    position: absolute;
-    right: 25rpx;
-    bottom: -10rpx;
-    padding: 0 10rpx;
-    font-size: 24rpx;
-    color: #999;
+.trans .tr:nth-last-child(1) {
+  border-bottom: none;
 }
 
-/* 详情盒子 */
-.detail-remind {
-    font-size: 9pt;
-    line-height: 100%;
-    color: #aaa;
-    text-align: center;
-    margin: 30rpx 5rpx;
+.trans .tr view {
+  flex: 1;
 }
-.ykt-detail-wraper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 30rpx 30rpx;
-    background: #fff;
-    border-radius: 3px;
+
+.trans .tr view:nth-child(1) {
+  flex: 2;
 }
-.ykt-detail {
-    display: flex;
-    flex-direction: column;   
-    padding: 0 10rpx;
-    overflow: hidden;
-}
-.ykt-head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120rpx;
-}
-.ykt-type-name {
-    font-size: 11pt;
-}
-.detail-list {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 35rpx 10rpx;
-}
-.detail-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25rpx 5rpx 20rpx;
-    border-top: 1px solid #eee;
-}
-.detail-item-label {
-    color: #888;
-    width: 60pt;
-}
-.detail-item-value {
-    flex: 1;
+
+.trans .tr view:nth-child(2) {
+  flex: 2;
 }

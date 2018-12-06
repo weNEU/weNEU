@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "门户",
+  "usingComponents": {
+    "van-tab": "../../dist_vant/tab/index",
+    "van-tabs": "../../dist_vant/tabs/index",
+    "van-cell": "../../dist_vant/cell/index",
+    "van-cell-group": "../../dist_vant/cell-group/index"
+  }
+}

@@ -1,0 +1,26 @@
+<!--pages/library_index/library_index.wxml-->
+<view class='card-list'>
+  <view class='card'>
+    <navigator url="../library/library">
+      <image src='https://ws1.sinaimg.cn/large/006tNbRwly1fxlivwo4yxj31pv0krgx7.jpg' mode="widthFix" class='card-image'></image>
+    </navigator>
+  </view>
+
+  <view class='card'>
+    <navigator url="../borrow/borrow">
+      <image src='https://ws2.sinaimg.cn/large/006tNbRwly1fxmxwpzem3j30zk0b4n2n.jpg' mode="widthFix" class='card-image'></image>
+    </navigator>
+  </view>
+
+  <view class='card'>
+    <navigator url="./location/location">
+      <image src='https://ws1.sinaimg.cn/large/006tNbRwly1fxmxwp8mzdj30zk0b4n6a.jpg' mode="widthFix" class='card-image'></image>
+    </navigator>
+  </view>
+
+    <view class='card'>
+    <navigator url="../navigate/web/web?url={{movie_url}}">
+      <image src='https://ws4.sinaimg.cn/large/006tNbRwly1fxmxwppc77j30zk0b4gqd.jpg' mode="widthFix" class='card-image'></image>
+    </navigator>
+  </view>
+</view>

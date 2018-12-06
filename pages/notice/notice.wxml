@@ -1,0 +1,19 @@
+<van-tabs active="{{ active }}">
+  <van-notice-bar speed="60" mode="closeable" text="欢迎进入weNEU公告板块。校园突发事件，假期时间安排，小程序故障信息等将在这里展示。weNEU新鲜事板块正在开发中，敬请期待。" />
+  <van-tab title="校园">
+      <van-cell-group>
+      <view wx:for="{{campus_list}}" wx:key="index">
+<van-cell title="{{item.title}}" icon="pending-evaluate" label="{{item.content}}"/>
+      </view>
+        </van-cell-group>
+
+  </van-tab>
+  <van-tab title="weNEU">
+        <van-cell-group>
+      <view wx:for="{{weneu_list}}" wx:key="index">
+<van-cell title="{{item.title}}" icon="pending-evaluate" label="{{item.content}}"/>
+      </view>
+        </van-cell-group>
+        <button bindtap="to" class="mo-btn">没有答案？我要提问</button>
+  </van-tab>
+</van-tabs>

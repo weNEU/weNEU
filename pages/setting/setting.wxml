@@ -2,9 +2,15 @@
 <wux-dialog id="wux-dialog--alert" />
 
 <view class="page">
-    <view class="page__bd page__bd_spacing">
+    <view class="page__bd page__bd_spacing option">
        <wux-button block type="balanced" bind:click="confirm1">重置图书馆账号 </wux-button>
        <wux-button block type="balanced" bind:click="confirm2">重置一卡通账号</wux-button>
        <wux-button block type="assertive" bind:click="confirm">重置学号</wux-button>
     </view>
 </view>
+
+<demo-block title="提示">
+  <view class="last-info">
+    <text>重置后请在后台关掉微信后再重新进入。\nweNEU不收集您的任何数据，当然包括您的学号和各类密码。您的数据是存在本地的。简而言之，微信有多安全，您的信息就有多安全。</text>
+  </view>
+</demo-block>

@@ -1,43 +1,49 @@
 <!--pages/set.wxml-->
-<picker class="button-sp-area" mode="selector" range="{{array1}}" value="{{index}}" bindchange="listenerPickerSelected">
-<view class="th-shadow">选择周：{{week}}</view>
-</picker>
-<icon ></icon>
-<view class="table">
-  <view class="tr">
-    <view class="th idx"></view>
-    <view class="th">周日</view>
-    <view class="th">周一</view>
-    <view class="th">周二</view>
-    <view class="th">周三</view>
-    <view class="th">周四</view>
-    <view class="th">周五</view>
-    <view class="th">周六</view>
-  </view>
-  </view>
- <block wx:for="{{[1,2,3,4,5,6]}}" wx:for-item="i"wx:key="td_key" >
+<van-row style='margin: 10rpx'>
+  <van-col span="2">
+    <image class="weui__icon top" src="/images/icon/left.svg" bindtap='last'>
+    </image>
+  </van-col>
+  <van-col span="20">
+    <picker class="button-sp-area text-white" mode="selector" range="{{array1}}" value="{{index}}" bindchange="listenerPickerSelected">
+      <view class='large-label center-label'>第{{week}}周</view>
+      <view class='center-label'>点击切换</view>
+    </picker>
+  </van-col>
+  <van-col span="2">
+    <image class="weui__icon top right" src="/images/icon/right.svg" bindtap='next'>
+    </image>
+  </van-col>
+</van-row>
+
+<view class="weui-panel card-border-view">
+  <view class="table">
     <view class="tr">
-      <view class="td idx">{{array[i-1]}}</view>
-      
-      <block  wx:for="{{[6,0,1,2,3,4,5]}}" wx:for-item="n" wx:key="listData_key" >
-      <view wx:if= "{{listData[n][i-1][0]==null}}">
-           <view class="td"></view>
-       </view>
-      <view wx:else>
-           <view class="td-shadow">
-           <text class="ggrid">{{listData[n][i-1][0]}}</text>
-           <text class="ggrid_location">{{listData[n][i-1][2]}}</text>
-           </view>
-      </view>      
+      <view class="th idx"></view>
+      <view class="th" style='color:{{colorList[0]}};'>周日</view>
+      <view class="th" style='color:{{colorList[1]}};'>周一</view>
+      <view class="th" style='color:{{colorList[2]}};'>周二</view>
+      <view class="th" style='color:{{colorList[3]}};'>周三</view>
+      <view class="th" style='color:{{colorList[4]}};'>周四</view>
+      <view class="th" style='color:{{colorList[5]}};'>周五</view>
+      <view class="th" style='color:{{colorList[6]}};'>周六</view>
+    </view>
+  </view>
+  <block wx:for="{{[1,2,3,4,5,6]}}" wx:for-item="i" wx:key="td_key">
+    <view class="tr">
+      <view class="idx">{{array[i-1]}}</view>
+      <block wx:for="{{[6,0,1,2,3,4,5]}}" wx:for-item="n" wx:key="listData_key">
+        <view wx:if="{{listData[n][i-1][0]==null}}">
+          <view class="td"></view>
+        </view>
+        <view wx:else>
+          <view class="td-shadow">
+            <text class="ggrid">{{listData[n][i-1][0]}}</text>
+            <text class="ggrid_location">{{listData[n][i-1][2]}}</text>
+          </view>
+        </view>
       </block>
     </view>
- </block>
- <view>
-    <image class="weui__icon" src="/images/icon/left.svg" bindtap='last'>
-        </image>
-    <image class="weui__icon middle" src="/images/icon/refresh.svg" >
-        </image>
-    <image class="weui__icon" src="/images/icon/right.svg"bindtap='next'>
-        </image>
-    <text class="weui-grid__label ">下拉重新导入学期课表</text>
-  </view>
+  </block>
+  <view class='center-label refresh-tip'>课表有更新?下拉刷新一下吧~</view>
+</view>

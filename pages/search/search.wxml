@@ -1,38 +1,44 @@
-
 <view class="container {{main.mainDisplay?'home':'active'}}">
-<view class="header">
+  <view class="header">
     <!--搜索框-->
     <view class="search-input">
       <view class="search-icon-box">
         <image class="search-icon" src="/images/core/xs/search-sign.png"></image>
       </view>
-      <form class="input-form" >
-        <input class="input-text"  bindinput="bindSearchInput" type="text" name="search" placeholder="教室/班级/教师"  />
-        <button class="input-clear-button" formType="reset" hover-class="none" >
+      <form class="input-form">
+        <input class="input-text" bindinput="bindSearchInput" type="text" name="search" placeholder="教室/班级/教师" />
+        <button class="input-clear-button" formType="reset" hover-class="none">
           <image class="clear-icon" src="/images/core/xs/clear.png"></image>
         </button>
-        <button class="input-confirm-button" bindtap='Search' formType="submit" hover-class="none" >
+        <button class="input-confirm-button" bindtap='Search' formType="submit" hover-class="none">
           <text>搜索</text>
         </button>
       </form>
     </view>
   </view>
-  
-  </view>
-<scroll-view style="height:{{height}}px;" class="results"  enable-back-to-top scroll-y>
+</view>
+
+<scroll-view style="height:{{height}}px;" class="results" enable-back-to-top scroll-y>
   <block wx:for="{{Blist}}" wx:key="index">
-        <view class="result" bindtap='showCourse'  data-location='{{item.location}}'data-searchno='{{item.searchno}}'>
-          <image lazy-load class="image-book" src="https://wxapi.hotapp.cn/proxy/?appkey=hotapp477295126&url=http://www.weneu.xyz/weNEU/images/idea.svg" ></image>
-          <view class="info">
-            <view class="row">
-              <view>{{item.name}}</view>
-            </view>
-            <view class="press">
-              <view>类型:{{item.type}}</view>
-              <view>代码:{{item.code}}</view>
-              <view>更强大的寻课功能正在开发，敬请期待</view>
-            </view>
+    <navigator url="/pages/search/detail/detail?type={{item.type}}&code={{item.code}}&name={{item.name}}">
+      <view class="result" data-location='{{item.location}}' data-searchno='{{item.searchno}}'>
+        <image lazy-load class="image-book" src="https://wxapi.hotapp.cn/proxy/?appkey=hotapp477295126&url=http://www.weneu.xyz/weNEU/images/idea.svg"></image>
+        <view class="info">
+          <view class="row">
+            <view>{{item.name}}</view>
+          </view>
+          <view class="press">
+            <view>类型:{{item.type}}</view>
+            <view>代码:{{item.code}}</view>
           </view>
         </view>
-      </block>
-  </scroll-view>
+      </view>
+    </navigator>
+  </block>
+</scroll-view>
+
+<demo-block title="提示">
+  <view class="last-info">
+    <text>请输入任意教室门牌号、班级名称或教师姓名的全部或部分。如“软英1602”，“信息A101”或“吕富媛”等。搜索结果包括此关键字对应的集体本学期的全部课程。\n检索需要耗费一定时间，还请您耐心等候。</text>
+  </view>
+</demo-block>

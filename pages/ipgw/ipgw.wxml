@@ -1,65 +1,42 @@
-<!--pages/ipgw/ipgw.wxml-->
-<view class="container">
+<demo-block title="基本信息">
+  <van-cell-group>
+    <van-cell icon="contact" title="当前状态" value="{{status}}" />
+      <van-field value="{{username}}" required clearable label="学号" placeholder="请输入学号" bind:input="useridInput" id="usernameid" />
 
-<van-cell-group>
-  <van-field
-    value="{{ username }}"
-    required
-    clearable
-    label="用户名"
-    icon="question"
-    placeholder="{{ipID}}"
-    bind:click-icon="onClickIcon"
-  />
+      <van-field value="{{password}}" type="password" label="密码" placeholder="请输入IP网关登录密码" required clearable bind:input="passwdInput" id="passwordid" />
 
-  <van-field
-    value="{{ password }}"
-    type="password"
-    label="密码"
-    placeholder="请输入密码"
-    required
-    border="{{ false }}"
-  />
-</van-cell-group>
-<van-switch checked="{{ checked }}" bind:change="onChange" />
-<van-button type="primary" plain bindtap="loginIn">登录</van-button>
-<van-button type="danger" plain bindtap="loginOut">断开</van-button>
+  </van-cell-group>
+</demo-block>
 
-<van-cell-group>
-  <van-field
-    left-icon="contact"
-    value="{{ use }}"
-    label="已用流量"
-    placeholder=""
-    disabled
-    bind:click-icon="onClickIcon"
-  />
+<demo-block title="操作">
+  <view class="ipgw-button-list">
+    <van-cell-group>
+      <van-button plain type="primary" bindtap="loginIn" class="ipgw-button">登录</van-button>
+      <van-button plain type="warning" bindtap="loginOut" class="ipgw-button">断开</van-button>
+      <van-button plain type="default" bindtap='upload' class="ipgw-button">刷新</van-button>
+    </van-cell-group>
+  </view>
+</demo-block>
 
-  <van-field
-    left-icon="contact"
-    value="{{ time }}"
-    label="已用时长"
-    placeholder=""
-    disabled
-    border="{{ false }}"
-  />
+<demo-block title="账户信息">
+  <van-cell-group>
+    <van-field left-icon="exchange" value="{{ use }}" label="已用流量" placeholder="" disabled bind:click-icon="onClickIcon" />
+    <van-field left-icon="gold-coin" value="{{ money }}" label="账户余额" placeholder="" disabled border="{{ false }}" />
+    <van-field left-icon="clock" value="{{usedtime}}" label="使用时长" placeholder="" disabled border="{{false}}" />
+    <van-field left-icon="location" value="{{addressip}}" label="IP地址" placeholder="" disabled border="{{ false }}" />
+  </van-cell-group>
+</demo-block>
 
-    <van-field
-    left-icon="contact"
-    value="{{ money }}"
-    label="账户余额"
-    placeholder=""
-    disabled
-    border="{{ false }}"
-  />
-
-    <van-field
-    left-icon="contact"
-    value="{{ ip }}"
-    label="IP地址"
-    placeholder=""
-    disabled
-    border="{{ false }}"
-  />
-</van-cell-group>
+<!-- <demo-block title="WiFi直连(暂不支持全部机型，若无效请使用上方登录按钮)">
+  <view class="ipgw-button-direct">
+    <van-cell-group>
+      <van-button round type="primary" bindtap="connect_wifi">一键连接</van-button>
+    </van-cell-group>
+  </view>
+</demo-block> -->
+<demo-block title="提示">
+<view class="last-info">
+  <text>使用前请先开启手机Wi-Fi并连接NEU\n连接失败有可能是欠费了哦😄</text>
+  <text>\n很抱歉地。因为学校IP网关ipgw.neu.edu.cn的安全证书不完整，会导致部分安卓用户无法正常使用IP网关功能，我们会尽快联系网关负责老师解决这一问题。IOS用户可以正常使用。</text>
 </view>
+</demo-block>

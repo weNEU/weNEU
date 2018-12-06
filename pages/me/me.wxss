@@ -1,6 +1,7 @@
-page {
-  background-color: #f8f8f8;
+Page{
+  background-color: #F1F1F1
 }
+
 .page__bd, .weui-panel {
   margin-top: 30rpx;
 }
@@ -139,8 +140,6 @@ button[type="default"][plain] {
   display: flex;
   background-color: #fff;
   min-height: 85rpx;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
 }
 /**user-info**/
 .user-info-box{
@@ -261,8 +260,6 @@ button[type="default"][plain] {
   display: flex;
   background-color: #fff;
   min-height: 85rpx;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
 }
 /**user-info**/
 .user-info-box{
@@ -271,7 +268,7 @@ button[type="default"][plain] {
 .user-info {
   flex-direction: column;
   margin: 30rpx 0 -1px;
-  padding: 25rpx 30rpx 20rpx;
+  padding: 20rpx;
 }
 .info-hd {
   display: flex;
@@ -297,7 +294,7 @@ button[type="default"][plain] {
   align-items: center;
   font-size: 10pt;
   line-height: 140%;
-  color: #aaa;
+  color: #8b8b8b;
 }
 .user-name {
   font-size: 16pt;
@@ -345,6 +342,7 @@ button[type="default"][plain] {
 }
 .btn-text {
   flex: 1;
+  color: #555;
 }
 .btn-open {
   display: flex;
@@ -365,4 +363,19 @@ button[type="default"][plain] {
   text-align: center;
   border-radius: 5px;
   margin: 40rpx 3%;
+}
+
+.color-block{
+  height: 50rpx;
+  flex: 1;
+}
+
+.color-option{
+  display: flex;
+  flex-direction: row;
+}
+
+.myPage{
+  height: 310rpx;
+  background-color: #78BBE6;
 }

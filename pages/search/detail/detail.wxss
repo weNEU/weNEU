@@ -1,0 +1,75 @@
+.grade {
+  margin: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.header {
+  box-shadow: 4rpx 4rpx 10rpx #ddd;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.none {
+  text-align: center;
+  background: #fff;
+}
+
+.grade-header {
+  background: #78bbe6;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.comment {
+  margin-top: 0.3rem;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.title {
+  display: block;
+}
+
+.info {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+.grade-lists {
+  background: #fff;
+  border-radius: 0.2rem;
+  display: block;
+  box-shadow: 4rpx 4rpx 4rpx #ddd;
+}
+
+.grade-lists .grade-list {
+  display: flex;
+  color: #666;
+  font-size: 30rpx;
+  padding: 0.2rem 0.5rem;
+}
+
+.grade-lists .grade-list.select {
+  background: #ddd !important;
+}
+
+.grade-lists .grade-list:nth-child(2n + 1) {
+  background-color: #f8f8f8;
+}
+
+.grade-lists .grade-list text {
+  padding: 0.1rem;
+  display: table-cell;
+  flex: 1;
+}
+
+.grade-lists .grade-list text:nth-child(1) {
+  flex: 4;
+}

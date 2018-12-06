@@ -1,56 +1,53 @@
-<!--pages/userinfo/userinfo.wxml-->
-<wux-toptips id="wux-toptips" />
-
-<view class="user-info-box">
-    <block>
-      <view class="user-info">
-        <view class="info-hd">
-          <image class="user-avatar" src="{{img}}"></image>
-          <view class="user-title">
-            <text class="user-name">{{cjInfo.name}}</text>
-            <text class="user-id">{{cjInfo.stuID}}</text>
-          </view>
-          <view class="time-box">
-            <text class="time-term">{{term}}</text>
-            <text class="time-now">第{{week}}周 - 星期{{weekday}}</text>
-          </view>
+<view class="myPage" style="background-color:{{pageBackgroundColor}}">
+<view class="weui-panel card-border-view">
+  <block>
+    <view class="user-info">
+      <view class="info-hd">
+        <image class="user-avatar" src="{{img}}"></image>
+        <view class="user-title">
+          <text class="user-name">{{cjInfo.name}}</text>
+          <text class="user-id">{{cjInfo.stuID}}</text>
         </view>
-        <view wx:if="{{index == 1}}">
+        <view class="time-box">
+          <text class="time-term">{{term}}</text>
+          <text class="time-now">第{{week}}周 - 星期{{weekday}}</text>
+        </view>
+      </view>
+      <view wx:if="{{index == 1}}">
         <view wx:if="{{isGra == 0}}">
-        <view class="info-bd">
-          <view class="info-bd-left">
-            <text class="user-text">性别：{{cjInfo.gender}}</text>
-            <text class="user-text">年级：{{cjInfo.grade}}级</text>
-            <text class="user-text">班级：{{cjInfo.myClass}}班</text>
+          <view class="info-bd">
+            <view class="info-bd-left">
+              <text class="user-text">性别：{{cjInfo.gender}}</text>
+              <text class="user-text">年级：{{cjInfo.grade}}级</text>
+              <text class="user-text">班级：{{cjInfo.myClass}}班</text>
+            </view>
+            <view class="info-bd-right">
+              <text class="user-text">学籍状态：{{cjInfo.student_type}}</text>
+              <text class="user-text">学院：{{cjInfo.college}}</text>
+              <text class="user-text">专业：{{cjInfo.major}}</text>
+            </view>
           </view>
-          <view class="info-bd-right">
-            <text class="user-text">学籍状态：{{cjInfo.student_type}}</text>
-            <text class="user-text">学院：{{cjInfo.college}}</text>
-            <text class="user-text">专业：{{cjInfo.major}}</text>
-          </view>
-        </view>
         </view>
         <view wx:else>
-         <view class="info-bd">
-          <view class="info-bd-left">
-            <text>性别：{{cjInfo.gender}}</text>
-            <text>年级：{{cjInfo.grade}}级</text>
-            <text>导师：{{cjInfo.teacher}}</text>
-          </view>
-          <view class="info-bd-right">
-            <text class="user-text">学籍状态：{{cjInfo.type}}</text>
-            <text class="user-text">方向：{{cjInfo.direction}}</text>
-            <text class="user-text">专业：{{cjInfo.major}}</text>
+          <view class="info-bd">
+            <view class="info-bd-left">
+              <text>性别：{{cjInfo.gender}}</text>
+              <text>年级：{{cjInfo.grade}}级</text>
+              <text>导师：{{cjInfo.teacher}}</text>
+            </view>
+            <view class="info-bd-right">
+              <text class="user-text">学籍状态：{{cjInfo.type}}</text>
+              <text class="user-text">方向：{{cjInfo.direction}}</text>
+              <text class="user-text">专业：{{cjInfo.major}}</text>
+            </view>
           </view>
         </view>
-        </view>
       </view>
-      </view>
-    </block>
-  </view>
-
-<view class="weui-panel border-shadow">  
-<view bindtap='clear'>
+    </view>
+  </block>
+</view>
+<!--选项-->
+<view class="weui-panel card-border-view" style='padding-top: 30rpx'>
   <navigator url="../setting/setting" class="about-link">
     <view class="more-btn">
       <image class="btn-icon" src="/images/more/login.svg"></image>
@@ -59,9 +56,23 @@
         <image class="btn-enter" src="/images/more/enter.png"></image>
       </view>
     </view>
-  </navigator>      
-</view>
-    <navigator url="../issue/issue" class="about-link">
+  </navigator>
+
+  <!-- <view class="about-link">
+    <view class="more-btn" bindtap='onOpen'>
+      <image class="btn-icon" src="/images/more/issue.svg"></image>
+      <text class="btn-text">更换配色(Ing)</text>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" position="bottom" bind:close="onClose" class="color-option">
+    <view class='color-block' id='#78BBE6' style='background-color:#78BBE6' bindtap="changeColor"></view>
+    <view class='color-block' id='#F9B8BE' style='background-color:#F9B8BE' bindtap="changeColor"></view>
+    <view class='color-block' id='#A3DE83' style='background-color:#A3DE83' bindtap="changeColor"></view>
+    <view class='color-block' id='#B793E6' style='background-color:#B793E6' bindtap="changeColor"></view>
+    <view class='color-block' id='#FF8C00' style='background-color:#FF8C00' bindtap="changeColor"></view>
+  </van-popup> -->
+
+  <navigator url="../issue/issue" class="about-link">
     <view class="more-btn">
       <image class="btn-icon" src="/images/more/issue.svg"></image>
       <text class="btn-text">问题反馈</text>
@@ -69,8 +80,8 @@
         <image class="btn-enter" src="/images/more/enter.png"></image>
       </view>
     </view>
-  </navigator>  
-  
+  </navigator>
+
   <navigator url="../reward/reward" class="about-link">
     <view class="more-btn">
       <image class="btn-icon" src="/images/more/money.svg"></image>
@@ -79,8 +90,8 @@
         <image class="btn-enter" src="/images/more/enter.png"></image>
       </view>
     </view>
-  </navigator>  
-  
+  </navigator>
+
   <navigator url="../about/about" class="about-link">
     <view class="more-btn">
       <image class="btn-icon" src="/images/more/about.svg"></image>
@@ -89,5 +100,6 @@
         <image class="btn-enter" src="/images/more/enter.png"></image>
       </view>
     </view>
-  </navigator>    
+  </navigator>
+</view>
 </view>

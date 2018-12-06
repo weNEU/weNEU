@@ -1,11 +1,67 @@
 <!--pages/IP/ip.wxml-->
-<van-notify id="custom-selector" />
-<van-button type="primary">按钮</van-button>
- <block   wx:for="{{TVlist}}" wx:key="index">
-    <view  class='con' data-id='{{item.addr}}' >
-        <navigator class='Video' url="/pages/tv/detail/detail?address={{item.addr}}">
-          <image class='img'src="{{item.img}}"></image>
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="央视" >
+    <block wx:for="{{center_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
           <text class='text'>{{item.title}}</text>
         </navigator>
-    </view>
-  </block>
+      </view>
+    </block>
+  </van-tab>
+
+  <van-tab title="卫视">
+      <block wx:for="{{province_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </block>
+  </van-tab>
+
+  <van-tab title="电影">
+      <block wx:for="{{movie_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </block>
+  </van-tab>
+
+    <van-tab title="体育">
+      <block wx:for="{{sport_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </block>
+  </van-tab>
+
+    <van-tab title="辽宁">
+      <block wx:for="{{liaoning_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </block>
+  </van-tab>
+  <van-tab title="其他">
+      <block wx:for="{{other_list}}" wx:key="index" >
+      <view class='channel-card-list' data-id='{{item.addr}}'>
+        <navigator class='video' url="/pages/tv/detail/detail?address={{item.addr}}">
+          <image class='img' src="{{item.img}}"></image>
+          <text class='text'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </block>
+  </van-tab>
+</van-tabs>

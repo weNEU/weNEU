@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "打赏-爱你哟（づ￣3￣）づ╭❤～"
+  "navigationBarTitleText": "打赏-爱你哟（づ￣3￣）づ╭❤～",
+  "usingComponents": {
+    "demo-block": "../../dist_vant/demo-block/index"
+  }
 }

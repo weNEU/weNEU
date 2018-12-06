@@ -3,7 +3,7 @@ page {
   height:100%;
 }
 .container {
-  background: #8ec5fc;
+  background: #0068b7;
   align-items: stretch;
   padding: 0;
   height: 100%;
@@ -175,7 +175,7 @@ form {
   font-size: 13pt;
   line-height: 85rpx;
   height: 85rpx;
-  background: #8ec5fc;
+  background: #0068b7;
   color: #fff;
   text-align: center;
   border-radius: 5px;

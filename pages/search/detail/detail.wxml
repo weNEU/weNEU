@@ -1,0 +1,30 @@
+<view class="header">
+  <view class="grade-header">
+    <view class="title">
+      <view>
+        {{name}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="grade-lists">
+  <view class="grade-list">
+    <text>课程名</text>
+    <text>教室</text>
+    <text>教师</text>
+    <text>节次</text>
+    <text>星期</text>
+    <text>开课周</text>
+  </view>
+  <block wx:for="{{course_list}}" wx:key="key">
+    <view class="grade-list {{item.selected ? 'select' : ''}}">
+      <text>{{item.course_name}}</text>
+      <text>{{item.classroom}}</text>
+      <text>{{item.teacher}}</text>
+      <text>{{item.lesson}}</text>
+      <text>{{item.day}}</text>
+      <text>{{item.week}}</text>
+    </view>
+  </block>
+</view>

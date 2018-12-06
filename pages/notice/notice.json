@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "公告",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-notice-bar": "../../dist_vant/notice-bar/index",
+    "van-tab": "../../dist_vant/tab/index",
+    "van-tabs": "../../dist_vant/tabs/index",
+    "van-cell": "../../dist_vant/cell/index",
+    "van-cell-group": "../../dist_vant/cell-group/index"
+  }
+}

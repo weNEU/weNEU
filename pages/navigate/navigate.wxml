@@ -1,0 +1,22 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="常用">
+  <van-cell-group>
+    <van-cell title="{{top_list[0].name}}" icon="location" is-link url="./web/web?url={{top_list[0].url}}" label="快速浏览东北大学大事件"/>
+    <van-cell title="{{top_list[1].name}}" icon="location" is-link url="./web/web?url={{top_list[1].url}}" />
+    <van-cell title="{{top_list[2].name}}" icon="location" is-link url="./web/web?url={{top_list[2].url}}" label="东北大学BB平台。您可以在此浏览课程信息下载课件"/>
+    <van-cell title="{{top_list[3].name}}" icon="location" is-link url="./web/web?url={{top_list[3].url}}" label=""/>        
+    <van-cell title="{{top_list[4].name}}" icon="location" is-link url="./web/web?url={{top_list[4].url}}" />
+    <van-cell title="{{top_list[5].name}}" icon="location" is-link url="./web/web?url={{top_list[5].url}}" />
+    <van-cell title="{{top_list[6].name}}" icon="location" is-link url="./web/web?url={{top_list[6].url}}" />
+    <van-cell title="{{top_list[7].name}}" icon="location" is-link url="./web/web?url={{top_list[7].url}}" />
+    <van-cell title="{{top_list[8].name}}" icon="location" is-link url="./web/web?url={{top_list[8].url}}" />
+    <van-cell title="{{top_list[9].name}}" icon="location" is-link url="./web/web?url={{top_list[9].url}}" />
+  </van-cell-group>
+  </van-tab>
+  <!-- <van-tab title="学院">
+
+  </van-tab>
+  <van-tab title="机构">
+
+  </van-tab> -->
+</van-tabs>

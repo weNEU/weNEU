@@ -1,51 +1,60 @@
-page {
-  background-color: #f8f8f8;
+Page {
+  background-color: #f1f1f1;
 }
-.swiper-container{
+
+.swiper-container {
   width: 750rpx;
-  position: relative;  
+  position: relative;
   margin-top: 0rpx;
 }
+
 .swiper_box {
   width: 100%;
-  height:400rpx;
+  height: 320rpx;
 }
-.swiper-item{
+
+.swiper-item {
   background: green;
 }
-.slide-image{
-  width:100%;
-  height: 400rpx;
+
+.slide-image {
+  height: 322rpx;
+  width: 95%;
 }
+
 swiper-item.image {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  height:400rpx;
+  height: 320rpx;
 }
-.swiper-container .dots{  
-  position: absolute;  
-  left: 0;  
-  right: 0;  
-  bottom: 20rpx;  
-  display: flex;  
-  justify-content: center;  
-}  
-.swiper-container .dots .dot{  
-  margin: 0 8rpx;  
-  width: 14rpx;  
-  height: 14rpx;  
-  background: #fff;  
-  border-radius: 50%;  
-  transition: all .6s;  
-  opacity: .5;
-}  
-.swiper-container .dots .dot.active{  
-  width: 14rpx;  
+
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.6s;
+  opacity: 0.5;
+}
+
+.swiper-container .dots .dot.active {
+  width: 14rpx;
   opacity: 1;
 }
+
 .page__bd, .weui-panel {
-  margin-top: 30rpx;
+  margin-top: 20rpx;
 }
 
 .page__hd {
@@ -112,8 +121,7 @@ swiper-item.image {
   padding: 10px 10px;
   color: #333;
   width: 20%;
-  padding-bottom: 10rpx
-  
+  padding-bottom: 10rpx;
 }
 
 .weui-grid__icon {
@@ -178,104 +186,119 @@ button[type="default"][plain] {
 .main-card {
   padding-bottom: 300rpx;
 }
-.main-card-item{
+
+.main-card-item {
   line-height: 100%;
   display: flex;
   flex-direction: column;
   background: #fff;
   border-top: 1rpx solid #e5e5e5;
   border-bottom: 1rpx solid #e5e5e5;
-  margin-bottom: 20rpx;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom center;
   overflow: hidden;
 }
-.main-card-item#kb{
-  /*background-image: url('/images/index/kb-bg.png');*/
-  /*微信暂不支持静态bgimg文件，改用服务器url*/
+
+.main-card-item#kb {
+  /*background-image: url('/images/index/kb-bg.png');*//*微信暂不支持静态bgimg文件，改用服务器url*/
   background-image: url('https://s1.ax1x.com/2018/09/15/iVMDC8.png');
 }
-.main-card-item#ykt{
-  /*background-image: url('/images/index/ykt-bg.png');*/
-  /*微信暂不支持静态bgimg文件，改用服务器url*/
+
+.main-card-item#ykt {
+  /*background-image: url('/images/index/ykt-bg.png');*//*微信暂不支持静态bgimg文件，改用服务器url*/
   background-image: url('https://s1.ax1x.com/2018/09/15/iVMwUP.png');
 }
-.main-card-item#jy{
-  /*background-image: url('/images/index/jy-bg.png');*/
-  /*微信暂不支持静态bgimg文件，改用服务器url*/
+
+.main-card-item#jy {
+  /*background-image: url('/images/index/jy-bg.png');*//*微信暂不支持静态bgimg文件，改用服务器url*/
   background-image: url('https://s1.ax1x.com/2018/09/15/iVMr8S.png');
 }
-.main-card-item#sdf{
-  /*background-image: url('/images/index/sdf-bg.png');*/
-  /*微信暂不支持静态bgimg文件，改用服务器url*/
+
+.main-card-item#sdf {
+  /*background-image: url('/images/index/sdf-bg.png');*//*微信暂不支持静态bgimg文件，改用服务器url*/
   background-image: url('https://s1.ax1x.com/2018/09/15/iVM04f.png');
 }
-.main-card-item navigator{
+
+.main-card-item navigator {
   display: flex;
   flex-direction: column;
 }
-page .navigator-hover{
-  background-color: rgba(100,100,100,0.1);
+
+page .navigator-hover {
+  background-color: rgba(100, 100, 100, 0.1);
   opacity: 0.8;
 }
-.card-item-hd{
+
+.card-item-hd {
   display: flex;
   align-items: center;
   height: 75rpx;
   border-bottom: 1rpx solid #e5e5e5;
   margin-left: 30rpx;
 }
-.card-item-icon{
+
+.card-item-icon {
   width: 40rpx;
   height: 40rpx;
   margin-right: 10rpx;
 }
-.card-item-name{
-  letter-spacing: 2px;
+
+.card-item-name {
+  color: #666;
+  letter-spacing: 2rpx;
 }
-.card-item-more{
+
+.card-item-more {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 25rpx;
 }
-.card-item-open{
+
+.card-item-open {
   width: 30rpx;
   height: 30rpx;
 }
-.card-item-bd{
+
+.card-item-bd {
   padding: 20rpx 25rpx 30rpx 0;
   margin-left: 30rpx;
   display: flex;
   flex-direction: column;
 }
-.card-info-hd{
+
+.card-info-hd {
   display: flex;
   justify-content: space-between;
 }
-.card-info-left{
+
+.card-info-left {
   display: flex;
   flex-direction: column;
 }
-.card-info-right{
+
+.card-info-right {
   display: flex;
   color: #acacac;
   flex-direction: column;
 }
-.card-info-name{
+
+.card-info-name {
   font-size: 16pt;
   line-height: 1.2;
   letter-spacing: 1px;
   color: #acacac;
 }
-.card-info-number{
+
+.card-info-number {
   line-height: 175%;
   text-indent: 1px;
   color: #aaa;
 }
-.main-ending{
+
+.main-ending {
   display: none;
   /*display: flex;*/
   align-items: center;
@@ -284,7 +307,8 @@ page .navigator-hover{
   margin-top: 75rpx;
   overflow: hidden;
 }
-.main-ending-text{
+
+.main-ending-text {
   width: 72pt;
   color: #ccc;
   font-size: 8pt;
@@ -292,47 +316,55 @@ page .navigator-hover{
   text-align: center;
   white-space: nowrap;
 }
-.main-ending-line{
+
+.main-ending-line {
   width: 100%;
   height: 0;
   border-top: 1rpx solid #e5e5e5;
 }
+
 /**今日课表**/
-.main-card-item#kb .card-item-bd{
+
+.main-card-item#kb .card-item-bd {
   padding: 0;
   margin-right: 25rpx;
 }
-.kb-nothing{
+
+.kb-nothing {
   align-items: center;
   justify-content: center;
   font-size: 11pt;
   min-height: 150rpx;
 }
-.kb-open{
+
+.kb-open {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #7f848a;
+  color: #666;
   height: 90rpx;
   border-top: 1rpx solid #e5e5e5;
   margin-top: -1rpx;
 }
-.kb-item{
+
+.kb-item {
   display: flex;
   height: 120rpx;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px dotted #e5e5e5;
 }
-.kb-item-left{
+
+.kb-item-left {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   padding-right: 30rpx;
   overflow: hidden;
 }
-.kb-item-what{
+
+.kb-item-what {
   font-size: 12pt;
   line-height: 200%;
   color: #777;
@@ -341,7 +373,8 @@ page .navigator-hover{
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.kb-item-w{
+
+.kb-item-w {
   font-size: 14pt;
   line-height: 200%;
   color: #777;
@@ -350,36 +383,44 @@ page .navigator-hover{
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.kb-item-when{
+
+.kb-item-when {
   line-height: 125%;
-  color: #bbb;
+  color: #aaa;
+  font-size: 30rpx;
 }
-.kb-item-where{
+
+.kb-item-where {
   flex: 0 0 auto;
   font-size: 14pt;
   color: #999;
   letter-spacing: 1px;
 }
+
 /**一卡通**/
-.ykt-balance{
+
+.ykt-balance {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   font-weight: bold;
   padding: 25rpx 0 30rpx;
 }
-.ykt-balance-text{
+
+.ykt-balance-text {
   font-size: 17pt;
   line-height: 2;
   color: #999;
 }
-.ykt-balance-value{
+
+.ykt-balance-value {
   font-size: 58pt;
   line-height: 1;
   padding: 0 20rpx;
   color: #8ec5fc;
 }
-.ykt-cost{
+
+.ykt-cost {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -387,25 +428,74 @@ page .navigator-hover{
   font-weight: bold;
   line-height: 200%;
 }
-.ykt-cost-text{
+
+.ykt-cost-text {
   font-size: 10pt;
   color: #999;
 }
-.ykt-cost-value{
+
+.ykt-cost-value {
   font-size: 12pt;
   font-weight: normal;
   color: #777;
   padding: 0 10rpx;
 }
-.ykt-cost-total{
+
+.ykt-cost-total {
   font-size: 16pt;
   color: #ffbf92;
   padding: 0 10rpx;
 }
-.ykt-title{
-  font-size: 10pt;
+
+.ykt-title {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+.ykt-no-cost {
   color: #bbb;
 }
-.ykt-no-cost{
-  color: #bbb;
+
+.tomorrow-table {
+  padding-left: 465rpx;
+}
+
+.myPage {
+  height: 310rpx;
+  background-color: #78bbe6;
+  margin-bottom: 30rpx;
+}
+
+/* 主页功能区 */
+
+.index-function-card {
+  height: 340rpx;
+}
+
+.index-function-card .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -20rpx;
+}
+
+.index-function-card .wx-swiper-dot {
+  width: 40rpx;
+  display: inline-flex;
+  height: 10rpx;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.index-function-card .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8rpx;
+}
+
+.index-function-card .wx-swiper-dot-active::before {
+  background: #78bbe6;
+}
+
+.weui-grid__label {
+  color: #666;
+  font-weight: 450;
 }

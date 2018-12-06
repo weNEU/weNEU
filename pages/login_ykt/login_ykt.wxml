@@ -2,18 +2,18 @@
 <view class="container">
 
   <block>
-    <image class="title" src="/images/more/text.gif"></image>
+    <image class="title" src="/images/tabbar/weNEU_welcome.png" mode="aspectFill"></image>
     <view class="content">
       <view class="hd" style="transform:rotateZ({{angle}}deg);">
-        <image class="logo" src="/images/tabbar/NEU.png"></image>
+        <image class="logo" src="/images/tabbar/weNEU_circle_with_border.png"></image>
         <image class="wave" src="/images/tabbar/wave.png" mode="aspectFill"></image>
         <image class="wave wave-bg" src="/images/tabbar/wave.png" mode="aspectFill"></image>
       </view>
       <view class="bd">
         <form class="login-form">
-                <text class="title_text">一卡通</text>
+                <text class="title_text">校园一卡通帐户绑定</text>
           <view class="input-group {{userid_focus ? 'active' : ''}}">
-            <text class="input-label">账号</text>
+            <text class="input-label">帐号</text>
             <input type="number" cursor-spacing="30" id="userid" placeholder="{{userid}}" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" disabled="true" />
           </view>
           <view class="input-group {{passwd_focus ? 'active' : ''}}">

@@ -1,5 +1,10 @@
 {
   "navigationBarTitleText": "帮助",
   "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#9ACD32"
+  "usingComponents": {
+    "van-tab": "../../dist_vant/tab/index",
+    "van-tabs": "../../dist_vant/tabs/index",
+    "van-cell": "../../dist_vant/cell/index",
+    "van-cell-group": "../../dist_vant/cell-group/index"
+  }
 }

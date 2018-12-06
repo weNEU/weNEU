@@ -1,21 +1,28 @@
 <!--pages/Test/Test.wxml-->
-<view class="container">
-        <view class="ks-header">
-            <view class="ks-text">
-                <text class="ks-header-title">2018-2019学年秋季学期</text>
-            </view>
-        </view>
-        <view wx:if="{{!isNull}}" >
-            <view class='card' >
-            <icon type="waiting" size="80" class='pic'/>
-             <text class="msg">暂无考试</text>
-            </view>
-        </view>
-        <view wx:else> 
-        <wux-cell-group>
-          <view wx:for="{{ksInfo}}" wx:if="{{item.name!=null}}">  
-            <wux-cell title="{{item.name}}"  label="{{item.classroom}}" extra="{{item.time}}"></wux-cell>
-          </view>
-        </wux-cell-group>
-        </view>
+<view wx:if="{{!isNull}}">
+  <view class='weui-panel card-border-view center-label'>
+    <icon type="waiting" size="80" class='pic' />
+    <view>暂无考试</view>
+  </view>
 </view>
+<view class="weui-panel card-border-view" wx:else>
+  <view class="ks-header">
+    <view class="ks-text">
+      <text class="ks-header-title">2018-2019学年秋季学期</text>
+    </view>
+  </view>
+
+  <view>
+    <wux-cell-group>
+      <view wx:for="{{ksInfo}}" wx:key="key" wx:if="{{item.name!=null}}">
+        <wux-cell title="{{item.name}}" label="{{item.classroom}}" extra="{{item.time}}"></wux-cell>
+      </view>
+    </wux-cell-group>
+  </view>
+</view>
+
+<demo-block title="提示">
+  <view class="last-info">
+    <text>以上数据仅供参考，请以教务处发布为准。</text>
+  </view>
+</demo-block>

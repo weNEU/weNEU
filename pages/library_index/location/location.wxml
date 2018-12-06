@@ -1,0 +1,42 @@
+<!--pages/library_index/location/location.wxml-->
+<van-tabs active="{{ active }}">
+  <van-tab title="南湖校区图书馆">
+    <van-tabs active="{{ active1 }}">
+      <van-tab title="图书阅览区">
+      <image class='img-full' mode="widthFix" src="https://ws2.sinaimg.cn/large/006tNbRwly1fxmyf2emowj31640lk782.jpg"> </image>
+      <image class='img-full' mode="widthFix" src="https://ws4.sinaimg.cn/large/006tNbRwly1fxmyih0fk0j31640t2wlc.jpg"> </image>
+      </van-tab>
+      <van-tab title="平面图">
+      <image class='img-full' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/130723/1.jpg"> </image>
+      <image class='img-full' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/130723/2.jpg"> </image>
+      <image class='img-full' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/130723/3.jpg"> </image>
+      <image class='img-full' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/130723/4.jpg"> </image>
+      </van-tab>
+      <van-tab title="开馆时间">
+      <image class='img-full' mode="widthFix" src="https://ws4.sinaimg.cn/large/006tNbRwly1fxsuxb1yqxj312a0h075s.jpg"> </image>      
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+  <van-tab title="浑南校区图书馆">
+    <van-tabs active="{{ active2 }}">
+      <van-tab title="图书阅览区">
+      <image class='img-full' mode="widthFix" src="https://ws1.sinaimg.cn/large/006tNbRwly1fxsuyq1zhkj30t80qw0wx.jpg"> </image>
+      </van-tab>
+      <van-tab title="平面图">
+      <image class='img-full2' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/180702/1.jpg"> </image>
+      <text class="comment">一层平面图</text>
+      <image class='img-full2' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/180702/2.jpg"> </image>
+      <text class="comment">二层平面图</text>
+      <image class='img-full2' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/180702/3.jpg"> </image>
+      <text class="comment">三层平面图</text>
+      <image class='img-full2' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/180702/4.jpg"> </image>
+      <text class="comment">四层平面图</text>
+      <image class='img-full2' mode="widthFix" src="http://www.lib.neu.edu.cn/uploads/allimg/180702/5.jpg"> </image>
+      <text class="comment">五层平面图</text>
+      </van-tab>      
+      <van-tab title="开馆时间">
+      <image class='img-full' mode="widthFix" src="https://ws4.sinaimg.cn/large/006tNbRwly1fxsuy4q8wwj30zx0u0ad4.jpg"> </image>      
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+</van-tabs>

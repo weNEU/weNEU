@@ -1,38 +1,80 @@
 <!--pages/grade/grade.wxml-->
-<wux-select id="wux-select1" />
-<wux-dialog id="wux-dialog" />
-<wux-dialog id="wux-dialog--alert" />
-<wux-wing-blank size="default">
- <view wx:if="{{isGra == 0}}">
-  <wux-card title="你的成绩" extra="GPA：{{GPA}}">
+
+<view class="grade">
+  <view class="header">
+    <view class="grade-header">
+      <view class="title">
+        <view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{title}}">
+            <view class="picker">
+              {{title[index]}}
+              <view class="comment">
+                <text>点击切换</text>
+              </view>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view>
+        <view class="info">
+          <text>绩点: {{GPA}}</text>
+          <text> </text>
+        </view>
+        <view class="info">
+          <text>学期课程数量: {{cjInfo.length}} </text>
+          <!-- <text>学期课程学分总数: </text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--本科生-->
+<view wx:if="{{isGra == 0}}">
+  <view class="grade-lists">
+    <view class="grade-list">
+      <text>课程名</text>
+      <text>学分</text>
+      <text>平时</text>
+      <text>期中</text>
+      <text>期末</text>
+      <text>总分</text>
+    </view>
+    <block wx:for="{{cjInfo}}" wx:key="key">
+      <view class="grade-list {{item.selected ? 'select' : ''}}" bindtap='open'>
+        <text>{{item.name}}</text>
+        <text>{{item.credit}}</text>
+        <text>{{item.gradePerform}}</text>
+        <text>{{item.gradeMiddle}}</text>
+        <text>{{item.gradeFinal}}</text>
+        <text>{{item.grade}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--研究生-->
+<view wx:else>
+  <wux-card title="你的成绩">
     <view slot="body">
-     <wux-cell-group  title="学期">
-            <wux-cell title="{{ title1 }}"  ></wux-cell>
-        </wux-cell-group>
-     <wux-cell-group>
-          <view wx:for="{{cjInfo}}">  
-          
-            <wux-cell title="{{item.name}}" label="学分:{{item.credit}} \n 平时:{{item.gradePerform}} 期中:{{item.gradeMedium}} 期末:{{item.gradeFinal}}" extra="{{item.grade}}" ></wux-cell>
-        
-          </view>
+      <wux-cell-group title="学期">
+        <wux-cell title="{{ title1 }}"></wux-cell>
+      </wux-cell-group>
+      <wux-cell-group>
+        <view wx:for="{{cjInfo}}">
+          <wux-cell title="{{item.name}}" label="学分:{{item.credit}}" extra="{{item.grade}}"></wux-cell>
+        </view>
       </wux-cell-group>
     </view>
   </wux-card>
-   </view>
-    <view wx:else>
-      <wux-card title="你的成绩">
-       <view slot="body">
-        <wux-cell-group  title="学期">
-        <wux-cell title="{{ title1 }}"  ></wux-cell>
-        </wux-cell-group>
-        <wux-cell-group>
-          <view wx:for="{{cjInfo}}">  
-           <wux-cell title="{{item.name}}" label="学分:{{item.credit}}" extra="{{item.grade}}" ></wux-cell>
-          </view>
-          </wux-cell-group>
-        </view>
-       </wux-card>
-    </view>
-</wux-wing-blank>
+</view>
 
-
+<demo-block title="提示">
+  <view class="last-info">
+    <text>以上数据仅供参考，不得作为保研、奖学金、成绩单等证明依据。请以教务处发布为准。</text>
+  </view>
+  <view class="last-info">
+    <text>「学期课程数量」指的是本学期已出成绩的课程数量。\n祝愿大家所有的付出都能兑现，所有的梦想都能实现！加油！
+  </text>
+  </view>
+</demo-block>

@@ -1,10 +1,7 @@
-/**detail.wxss (common)**/
-
-
 .container{
-    background:  #EAEAEF;
     padding: 0 30rpx;
     min-height: 100%;
+    background-color: #F1F1F1;
 }
 .title{
     font-size: 18pt;

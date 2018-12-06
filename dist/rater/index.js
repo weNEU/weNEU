@@ -8,6 +8,10 @@ Component({
                 this.updateValue()
             },
         },
+        icon: {
+            type: String,
+            value: '',
+        },
         star: {
             type: String,
             value: '★',
@@ -20,7 +24,7 @@ Component({
             type: Number,
             value: 0,
             observer(newVal) {
-                if (!this.data.auto) {
+                if (this.data.controlled) {
                     this.updateValue(newVal)
                 }
             },
@@ -53,9 +57,9 @@ Component({
             type: Boolean,
             value: false,
         },
-        auto: {
+        controlled: {
             type: Boolean,
-            value: true,
+            value: false,
         },
     },
     data: {
@@ -112,7 +116,7 @@ Component({
             }
         },
         fireEvents(value, index) {
-            if (this.data.auto) {
+            if (!this.data.controlled) {
                 this.updateValue(value)
             }
 
@@ -147,8 +151,8 @@ Component({
         },
     },
     attached() {
-        const { defaultValue, value, auto } = this.data
-        const raterValue = !auto ? value : defaultValue
+        const { defaultValue, value, controlled } = this.data
+        const raterValue = controlled ? value : defaultValue
 
         this.updateValue(raterValue)
     },

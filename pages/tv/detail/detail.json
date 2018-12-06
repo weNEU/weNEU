@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "电视墙(请先连接NEU)",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "demo-block": "../../../dist_vant/demo-block/index"
+  }
+}

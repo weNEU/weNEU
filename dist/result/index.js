@@ -21,7 +21,7 @@ Component({
         icon: {
             type: null,
             value: defaultIcon,
-            observe(newVal) {
+            observer(newVal) {
                 this.setData({
                     resultIcon: getIcon(newVal),
                 })
@@ -60,6 +60,12 @@ Component({
         },
         bindgetphonenumber(e) {
             this.triggerEvent('getphonenumber', { ...e.detail, ...e.currentTarget.dataset })
+        },
+        bindopensetting(e) {
+            this.triggerEvent('opensetting', { ...e.detail, ...e.currentTarget.dataset })
+        },
+        onError(e) {
+            this.triggerEvent('error', { ...e.detail, ...e.currentTarget.dataset })
         },
     },
     data: {

@@ -1,5 +1,9 @@
-<!--pages/ds/ds.wxml-->
+<view wx:for="{{imgalist}}" wx:for-item="image" class="previewimg" wx:key="key">
+  <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" class='img'></image>
+</view>
 
-<view wx:for="{{imgalist}}"wx:for-item="image"class="previewimg">  
-        <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" class='img'></image>  
-      </view>  
+<demo-block title="我有一个梦想">
+  <view class="last-info">
+    <text>weNEU有一个梦想，就是我们想为东北大学的校园信息化建设贡献自己的一份力量。我们热爱东北大学，我们牢记母校「使命如此其重大，能不奋勉乎吾曹？ 」的谆谆教导。\n让我们共同努力迎接东大百年，祝愿我们的母校越来越好！</text>
+  </view>
+</demo-block>

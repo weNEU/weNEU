@@ -1,8 +1,8 @@
 {
-  "navigationBarTitleText": "电视墙-请连接校园网使用",
+  "navigationBarTitleText": "电视墙(请先连接NEU)",
   "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#FFD700",
-    "usingComponents": {
-      "van-button": "../../dist_vant/notify/index"
-    }
+  "usingComponents": {
+    "van-tab": "../../dist_vant/tab/index",
+    "van-tabs": "../../dist_vant/tabs/index"
+  }
 }

@@ -1,57 +1,43 @@
 <!--pages/ykt/ykt.wxml-->
 <view class="container">
-  <view wx:if="{{remind}}" class="remind-box">
-    <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
-    <block wx:else>
-      <image class="remind-img" src="/images/index/nothing.png"></image>
-      <text class="remind-text">{{remind}}</text>
-    </block>
+  <view class="ykt-card">
+    <view class="ykt-black-line">
+    <image src="/images/core/card-bg-neu.png" class="card-bg-neu" mode="widthFix"></image></view>
+    <view class="ykt-content">
+      <view class="ykt-ye">
+        <text class="ykt-ye-name">余额</text>
+        <view class="ykt-ye-money">
+          <text class="ykt-ye-value">{{balance}}</text>元
+        </view>
+      </view>
+      <view class="ykt-img">
+        <image src="/images/core/card-bg.png"></image>
+      </view>
+    </view>
   </view>
-  <block wx:else>
-    <view class="ykt-card">
-      <view class="ykt-black-line"></view>
-      <view class="ykt-content">
-        <view class="ykt-ye">
-          <text class="ykt-ye-name">余额</text>
-          <view class="ykt-ye-money">
-            <text class="ykt-ye-value">{{balance}}</text>元
-          </view>
-        </view>
-        <view class="ykt-img">
-          <image src="/images/core/card-bg.png"></image>
-        </view>
-      </view>
-      <view class="ykt-card-more">
-        <text class="ykt-ye-time">姓名：{{name}}</text>
-        <text class="ykt-ye-id">卡号：{{cardID}}</text>
-      </view>
-    </view>
 
-    <text class="grid-remind">今日消费记录：</text>
-    <view wx:for="{{record[0]}}" wx:key="{{index}}">
-      <view class="ykt-detail-wraper" >
-        <view class="ykt-head">
-          <text class="ykt-type-name">{{item.place}}</text>
-        </view>
-        <view class="detail-list">
-          <view class="detail-item">
-            <text class="detail-item-label">交易时间</text>
-            <text class="detail-item-value">{{item.time}}</text>
+  <view>
+    <view class="title">
+      七日流水
+    </view>
+    <!-- 交易数据 -->
+    <view class="trans table">
+      <view class="tr thead">
+        <view>时间</view>
+        <view>地点</view>
+        <view>消费</view>
+        <view>余额</view>
+      </view>
+      <view wx:for="{{record}}" wx:key="{{index}}">
+        <block wx:for="{{item}}" wx:key="{{index}}">
+          <view class="tr">
+            <view>{{item.time}}</view>
+            <view>{{item.place}}</view>
+            <view>{{item.money}}</view>
+            <view>{{item.balance}}</view>
           </view>
-          <view class="detail-item">
-            <text class="detail-item-label">交易类型</text>
-            <text class="detail-item-value">{{item.station}}</text>
-          </view>
-          <view class="detail-item">
-            <text class="detail-item-label">消费金额</text>
-            <text class="detail-item-value">{{item.money}}</text>
-          </view>
-          <view class="detail-item">
-            <text class="detail-item-label">余额</text>
-            <text class="detail-item-value">{{item.balance}}</text>
-          </view>
-        </view>
+        </block>
       </view>
     </view>
-  </block>
+  </view>
 </view>
